@@ -1,0 +1,25 @@
+---
+title: "Barcelona Counsillors' Travel Expenses"
+author: "Admin"
+date: 2022-05-09T21:13:14-05:00
+categories: ["R"]
+tags: ["Open Data BCN", "plotly", "treemap"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+
+load(file = "../../../resources/_gen/assets/G.Rdata")
+```
+
+## Introduction
+
+Owing to the [Open Data BCN](https://opendata-ajuntament.barcelona.cat/es) project, Barcelona City Council provides several datasets which are almost ready for consumption with minimal pre-processing. Among them, the tables of [travel expenses of members of the town council](https://opendata-ajuntament.barcelona.cat/data/es/dataset/viatges-govern-bcn) (excluding the mayor) by year contain information about cost, duration and destination of the travels of said members since 2019. ^[Some data preparation is necessary to correct typing errors, account for the fact that some travels are split in several legs even though they have the same accounting id, etc]
+
+The information is organized in csv files with a record for each travel accounting id (*Numero_de registre* in the files) and expense category: travel proper (*Desplaçament*), lodging (*Allotjament*) and other (*Altres despeses*). Each record contains the name of the member, city and country of destination, amount in euros and dates of departure and arrival.
+
+With that in mind we are ready to start exploring the data.
+
+## Total travel expenses by year
+
+g
