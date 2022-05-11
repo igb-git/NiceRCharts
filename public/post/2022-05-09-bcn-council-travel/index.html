@@ -1,110 +1,206 @@
+
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Barcelona Counsillors&#39; Travel Expenses - Nice R Charts</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="">
-		<meta property="og:title" content="Barcelona Counsillors&#39; Travel Expenses" />
-<meta property="og:description" content="Introduction Owing to the Open Data BCN project, Barcelona City Council provides several datasets which are almost ready for consumption with minimal pre-processing. Among them, the tables of travel expenses of members of the town council (excluding the mayor) by year contain information about cost, duration and destination of the travels of said members since 2019. 1
-The information is organized in csv files with a record for each travel accounting id (Numero_de registre in the files) and expense category: travel proper (Desplaçament), lodging (Allotjament) and other (Altres despeses)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/post/2022-05-09-bcn-council-travel/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-05-09T21:13:14-05:00" />
-<meta property="article:modified_time" content="2022-05-09T21:13:14-05:00" />
+<html lang="en" data-figures="" class="page">
+  <head>
+<title>Barcelona Counsillors&#39; Travel Expenses | Clarity</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script async src="https://www.googletagmanager.com/gtag/js?id=XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'XXXXXXXXXX');
+</script>
 
+  
+<meta property="og:locale" content="en" />
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+<meta property="og:type" content="article">
+<meta name="description" content="Introduction Owing to the Open Data BCN project, Barcelona City Council provides several datasets which are almost ready for consumption with minimal …" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@janedoe">
+<meta name="twitter:title" content="Barcelona Counsillors&#39; Travel Expenses" />
+<meta property="og:url" content="https://example.com/post/2022-05-09-bcn-council-travel/" />
+<meta property="og:title" content="Barcelona Counsillors&#39; Travel Expenses" />
+<meta property="og:description" content="Introduction Owing to the Open Data BCN project, Barcelona City Council provides several datasets which are almost ready for consumption with minimal …" />
+<meta property="og:image" content="https://example.com/images/thumbnail.png" />
 
-	<link rel="stylesheet" href="/css/style.css">
-	
+<link rel="apple-touch-icon" sizes="180x180" href="https://example.com/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://example.com/icons/favicon-32x32.png">
+<link rel="manifest" href="https://example.com/icons/site.webmanifest">
 
-	<link rel="shortcut icon" href="/favicon.ico">
-		
-</head>
-<body class="body">
-	<div class="container container--outer">
-		<header class="header">
-	<div class="container header__container">
-		
-	<div class="logo">
-		<a class="logo__link" href="/" title="Nice R Charts" rel="home">
-			<div class="logo__item logo__text">
-					<div class="logo__title">Nice R Charts</div>
-					<div class="logo__tagline">A testbed of sorts for potentially useless R plots.</div>
-				</div>
-		</a>
-	</div>
-		
-<nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/docs/customization/">
-				
-				<span class="menu__text">Customization</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/docs/faq/">
-				
-				<span class="menu__text">FAQ</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/post/basic-elements/">
-				
-				<span class="menu__text">Basic Elements</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
+<link rel="canonical" href="https://example.com/post/2022-05-09-bcn-council-travel/">
 
-	</div>
+    
+
+    
+    
+    <link rel="preload" href="https://example.com/css/styles.54eab6953ed04c3ee282968d1e1b85fed84d551aee762f927a0860811bc873413381a397ea6b9db08a0966e77b1ecf467680006010b3e82c4ba7efa8fec6656b.css" integrity = "sha512-VOq2lT7QTD7igpaNHhuF/thNVRrudi&#43;SeghggRvIc0EzgaOX6mudsIoJZud7Hs9GdoAAYBCz6CxLp&#43;&#43;o/sZlaw==" as="style" crossorigin="anonymous">
+    <link rel="preload" href="https://example.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js" as="script" integrity=
+    "sha512-p&#43;KfrlANWqCxN6t/ns/RbQCX&#43;apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="https://example.com/css/styles.54eab6953ed04c3ee282968d1e1b85fed84d551aee762f927a0860811bc873413381a397ea6b9db08a0966e77b1ecf467680006010b3e82c4ba7efa8fec6656b.css" integrity="sha512-VOq2lT7QTD7igpaNHhuF/thNVRrudi&#43;SeghggRvIc0EzgaOX6mudsIoJZud7Hs9GdoAAYBCz6CxLp&#43;&#43;o/sZlaw==" crossorigin="anonymous">
+    
+  </head>
+  
+  
+    
+  
+  <body data-code="7" data-lines="false" id="documentTop">
+
+<header class="nav_header" >
+  <nav class="nav"><a href='https://example.com/' class="nav_brand nav_item" title="Clarity">Clarity
+  <div class="nav_close">
+    <div><svg class="icon">
+  <title>open-menu</title>
+  <use xlink:href="#open-menu"></use>
+</svg>
+<svg class="icon">
+  <title>closeme</title>
+  <use xlink:href="#closeme"></use>
+</svg>
+</div>
+  </div>
+</a>
+
+    <div class='nav_body nav_body_left'>
+      
+      
+      
+        
+
+  <div class="nav_parent">
+    <a href="https://example.com/" class="nav_item" title="Home">Home </a>
+  </div>
+  <div class="nav_parent">
+    <a href="https://example.com/about/" class="nav_item" title="About">About </a>
+  </div>
+      
+      <div class="nav_parent">
+        <a href="#" class="nav_item"></a>
+        <div class="nav_sub">
+          <span class="nav_child"></span>
+          
+          <a href="https://example.com/" class="nav_child nav_item">English</a>
+          
+          <a href="https://example.com/pt/" class="nav_child nav_item">Português</a>
+          
+        </div>
+      </div>
+<div class='follow'>
+    
+  <a href="https://example.com/index.xml">
+    <svg class="icon">
+  <title>rss</title>
+  <use xlink:href="#rss"></use>
+</svg>
+
+  </a>
+<div class="color_mode">
+  <input type="checkbox" class="color_choice" id="mode">
+</div>
+
+</div>
+
+    </div>
+  </nav>
 </header>
-		<div class="wrapper flex">
-			<div class="primary">
-			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">Barcelona Counsillors&#39; Travel Expenses</h1>
-			<div class="post__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-05-09T21:13:14-05:00">May 09, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/r/" rel="category">R</a>
-	</span>
-</div></div>
-		</header>
-		<div class="content post__content clearfix">
-			
+
+    <main>
+  
+<div class="grid-inverse wrap content">
+  <article class="post_content">
+    <h1 class="post_title">Barcelona Counsillors&#39; Travel Expenses</h1>
+  <div class="post_meta">
+    <span><svg class="icon">
+  <title>calendar</title>
+  <use xlink:href="#calendar"></use>
+</svg>
+</span>
+    <span class="post_date">
+      May 9, 2022</span>
+    <span class="post_time"> · 26 min read</span><span>&nbsp;· <a href='https://example.com/tags/open-data-bcn' title="Open Data BCN" class="post_tag button button_translucent">Open Data BCN
+        </a><a href='https://example.com/tags/plotly' title="plotly" class="post_tag button button_translucent">plotly
+        </a><a href='https://example.com/tags/treemap' title="treemap" class="post_tag button button_translucent">treemap
+        </a>
+    </span>
+    <span class="page_only">&nbsp;·
+  <div class="post_share">
+    Share on:
+    <a href="https://twitter.com/intent/tweet?text=Barcelona%20Counsillors%27%20Travel%20Expenses&url=https%3a%2f%2fexample.com%2fpost%2f2022-05-09-bcn-council-travel%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+      <svg class="icon">
+  <title>twitter</title>
+  <use xlink:href="#twitter"></use>
+</svg>
+
+    </a>
+    <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fexample.com%2fpost%2f2022-05-09-bcn-council-travel%2f&t=Barcelona%20Counsillors%27%20Travel%20Expenses" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+      <svg class="icon">
+  <title>facebook</title>
+  <use xlink:href="#facebook"></use>
+</svg>
+
+    </a>
+    <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
+      <svg class="icon">
+  <title>linkedin</title>
+  <use xlink:href="#linkedin"></use>
+</svg>
+
+    </a>
+    <a href="https://example.com/post/2022-05-09-bcn-council-travel/" title="Copy Link" class="link link_yank">
+      <svg class="icon">
+  <title>copy</title>
+  <use xlink:href="#copy"></use>
+</svg>
+
+    </a>
+  </div>
+  </span>
+  </div>
+
+    <div class="post_body">
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/plotly-binding/plotly.js"></script>
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/typedarray/typedarray.min.js"></script>
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/jquery/jquery.min.js"></script>
+<link href="https://example.com/post/2022-05-09-bcn-council-travel/index_files/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/crosstalk/js/crosstalk.min.js"></script>
+<link href="https://example.com/post/2022-05-09-bcn-council-travel/index_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/plotly-main/plotly-latest.min.js"></script>
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/core-js/shim.min.js"></script>
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/react/react.min.js"></script>
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/react/react-dom.min.js"></script>
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/reactwidget/react-tools.js"></script>
+<script src="https://example.com/post/2022-05-09-bcn-council-travel/index_files/reactable-binding/reactable.js"></script>
 
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <p>Owing to the <a href="https://opendata-ajuntament.barcelona.cat/es">Open Data BCN</a> project, Barcelona City Council provides several datasets which are almost ready for consumption with minimal pre-processing. Among them, the tables of <a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/viatges-govern-bcn">travel expenses of members of the town council</a> (excluding the mayor) by year contain information about cost, duration and destination of the travels of said members since 2019. <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p>The information is organized in csv files with a record for each travel accounting id (<em>Numero_de registre</em> in the files) and expense category: travel proper (<em>Desplaçament</em>), lodging (<em>Allotjament</em>) and other (<em>Altres despeses</em>). Each record contains the name of the member, city and country of destination, amount in euros and dates of departure and arrival.</p>
-<p>With that in mind we are ready to start exploring the data.</p>
 </div>
-<div id="total-travel-expenses-by-year" class="section level2">
-<h2>Total travel expenses by year</h2>
-<p>g</p>
+<div id="enter-the-charts" class="section level2">
+<h2>Enter the charts</h2>
+<p>With that in mind we are ready to start exploring the data. First, we plot the aggregate expenses per year (bearing in mind that for 2022 we only have data for the first quarter).</p>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":[{"orientation":"v","width":[0.9,0.9,0.9,0.9],"base":[14479.96,43000.08,598.97,27500.14],"x":[2,3,4,1],"y":[4971.67,29520.6,613.66,10797.76],"text":[" 4.971,67","29.520,60","   613,66","10.797,76"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Allotjament","legendgroup":"Allotjament","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9],"base":[10528.77,31446.36,187.08,18894.32],"x":[2,3,4,1],"y":[3951.19,11553.72,411.89,8605.82],"text":[" 3.951,19","11.553,72","   411,89"," 8.605,82"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Altres despeses","legendgroup":"Altres despeses","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9],"base":[0,0,0,0],"x":[2,3,4,1],"y":[10528.77,31446.36,187.08,18894.32],"text":["10.528,77","31.446,36","   187,08","18.894,32"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Desplaçament","legendgroup":"Desplaçament","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2,3,4,1],"y":[20461.63,73530.68,2222.63,39307.9],"text":["19.451,63","72.520,68"," 1.212,63","38.297,90"],"hovertext":["19.451,63","72.520,68"," 1.212,63","38.297,90"],"textfont":{"size":14.6645669291339,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.6846572599997,"r":7.30593607305936,"b":32.9345534824987,"l":10.958904109589},"plot_bgcolor":[],"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,4.6],"tickmode":"array","ticktext":["2019","2020","2021","2022"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["2019","2020","2021","2022"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":18.5969281859693},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-3676.534,77207.214],"tickmode":"array","ticktext":["0","10,000","20,000","30,000","40,000","50,000","60,000","70,000"],"tickvals":[0,10000,20000,30000,40000,50000,60000,70000],"categoryorder":"array","categoryarray":["0","10,000","20,000","30,000","40,000","50,000","60,000","70,000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Concepte","font":{"color":null,"family":null,"size":0}}},"hovermode":"closest","barmode":"relative","title":{"text":"Councillors' yearly travel expenses (in Euros)<br><sup>Source: Open Data BCN (https://opendata-ajuntament.barcelona.cat/es/)<\/sup>"}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1bf32ce71f74":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"},"1bf33587307e":{"x":{},"y":{},"text":{},"label":{}}},"cur_data":"1bf32ce71f74","visdat":{"1bf32ce71f74":["function (y) ","x"],"1bf33587307e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>This is quite a plain plot but, since we have data that can be related in a hierarchical (or nested) fashion (as in ); we can use the <a href="https://plotly.com/r/treemaps/">treemap</a> from plotly graphing library to make a more interesting visualization. For instance, we can present the data aggregated by year and allow a drill down to an aggregation by member or the council and then show the detail of the travel, like so:</p>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"visdat":{"1bf31915986a":["function () ","plotlyVisDat"]},"cur_data":"1bf31915986a","attrs":{"1bf31915986a":{"ids":["2021","2020","2019","2022","2021-FRANCESC XAVIER MARCE CAROL","2021-JAIME COLLBONI CUADRADO","2021-RAQUEL GIL EIROA","2020-LAIA BONET RULL","2021-Laura PÉREZ CASTAÑO","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2020-FRANCESC XAVIER MARCE CAROL","2019- JOSEP M MONTANER MARTORELL","2020-JOAN SUBIRATS HUMET","2020- MONTSERRAT BALLARIN ESPUÑA","2019-FREDERIC XIMENO ROCA","2022-JANET SANZ CID","2021-MIQUEL RODRIGUEZ PLANAS","2021-LAIA BONET RULL","2021-DAVID ESCUDE RODRIGUEZ","2020-JANET SANZ CID","2021-JOAN SUBIRATS HUMET","2021-JOAN RAMON RIERA ALEMANY","2019-GEMMA TARAFA ORPINELL","2021- MONTSERRAT BALLARIN ESPUÑA","2020-RAQUEL GIL EIROA","2020-ALBERT BATLLE BASTARDAS","2021-MICHAEL SERAFIN DONALDSON CARBON","2019-FRANCESCA BRIA","2020-MARC SERRA SOLE","2019- JORDI MARTI GRAU","2020-ALVARO PORRO GONZALEZ","2020-LUCIA MARTIN GONZALEZ","2019-AGUSTÍ COLOM CABAU","2021-ALBERT BATLLE BASTARDAS","2021-JANET SANZ CID","2021-MARC SERRA SOLE","2021-JULIA TRIAS JURADO","2021-PABLO ANGEL SOLANILLA FRANCO","2021-JORDI MARTI GRAU","2021-ELOI BADIA CASAS","2021-LUCIA MARTIN GONZALEZ","2019-JOSE LUIS GOMEZ FERNANDEZ","2021- EMP MPAL INICIATIVAS EMPR DE MALAGA","2020-Laura PÉREZ CASTAÑO","2020-DAVID ESCUDE RODRIGUEZ","2020-JAIME COLLBONI CUADRADO","2019-ALVARO PORRO GONZALEZ","2019-FRANCESC XAVIER MARCE CAROL","2019-LAIA BONET RULL","2019- MONTSERRAT BALLARIN ESPUÑA","2019-MIQUEL RODRIGUEZ PLANAS","2019-MICHAEL SERAFIN DONALDSON CARBON","2019-MARC SERRA SOLE","2019-JOAN SUBIRATS HUMET","2019-JORDI RABASSA MASSONS","21-FRANCESC XAVIER MARCE CAROL","23-JAIME COLLBONI CUADRADO","24-RAQUEL GIL EIROA","32-LAIA BONET RULL","44-Laura PÉREZ CASTAÑO","47-MIQUEL ÀNGEL ESSOMBA GELABERT","56-JAIME COLLBONI CUADRADO","63-FRANCESC XAVIER MARCE CAROL","70- JOSEP M MONTANER MARTORELL","106-JOAN SUBIRATS HUMET","110- MONTSERRAT BALLARIN ESPUÑA","231-LAIA BONET RULL","236-FREDERIC XIMENO ROCA","243-JANET SANZ CID","245-JAIME COLLBONI CUADRADO","255-MIQUEL RODRIGUEZ PLANAS","257-LAIA BONET RULL","283-DAVID ESCUDE RODRIGUEZ","294-FRANCESC XAVIER MARCE CAROL","312-JANET SANZ CID","324-JAIME COLLBONI CUADRADO","358-LAIA BONET RULL","443-FRANCESC XAVIER MARCE CAROL","497-JOAN SUBIRATS HUMET","499-DAVID ESCUDE RODRIGUEZ","520-JOAN RAMON RIERA ALEMANY","531-FRANCESC XAVIER MARCE CAROL","549- MONTSERRAT BALLARIN ESPUÑA","552-GEMMA TARAFA ORPINELL","557- MONTSERRAT BALLARIN ESPUÑA","570-MIQUEL ÀNGEL ESSOMBA GELABERT","604-RAQUEL GIL EIROA","605-RAQUEL GIL EIROA","621-JOAN SUBIRATS HUMET","685-FRANCESC XAVIER MARCE CAROL","693-DAVID ESCUDE RODRIGUEZ","709-ALBERT BATLLE BASTARDAS","732-JAIME COLLBONI CUADRADO","736-JAIME COLLBONI CUADRADO","839-DAVID ESCUDE RODRIGUEZ","878-MICHAEL SERAFIN DONALDSON CARBON","892-Laura PÉREZ CASTAÑO","920-JAIME COLLBONI CUADRADO","940-MICHAEL SERAFIN DONALDSON CARBON","944-FRANCESCA BRIA","979-MARC SERRA SOLE","980-FRANCESC XAVIER MARCE CAROL","988-JANET SANZ CID","1025-JAIME COLLBONI CUADRADO","1044-MARC SERRA SOLE","1081- JORDI MARTI GRAU","1114-ALVARO PORRO GONZALEZ","1120-FRANCESC XAVIER MARCE CAROL","1123-LUCIA MARTIN GONZALEZ","1171-JAIME COLLBONI CUADRADO","1201-LAIA BONET RULL","1264-FRANCESC XAVIER MARCE CAROL","1341-FRANCESC XAVIER MARCE CAROL","1367-AGUSTÍ COLOM CABAU","1388-JAIME COLLBONI CUADRADO","1389-ALBERT BATLLE BASTARDAS","1413-JANET SANZ CID","1414-Laura PÉREZ CASTAÑO","1433-MIQUEL ÀNGEL ESSOMBA GELABERT","1486-MICHAEL SERAFIN DONALDSON CARBON","1495-LAIA BONET RULL","1519-MIQUEL RODRIGUEZ PLANAS","1566-FRANCESC XAVIER MARCE CAROL","1600-MARC SERRA SOLE","1601-JULIA TRIAS JURADO","1682-Laura PÉREZ CASTAÑO","1690-FRANCESC XAVIER MARCE CAROL","1698-MIQUEL RODRIGUEZ PLANAS","1700-MICHAEL SERAFIN DONALDSON CARBON","1776-MICHAEL SERAFIN DONALDSON CARBON","1777-DAVID ESCUDE RODRIGUEZ","1782-PABLO ANGEL SOLANILLA FRANCO","1810-JORDI MARTI GRAU","1823-JANET SANZ CID","1825-JAIME COLLBONI CUADRADO","1831-JANET SANZ CID","1832-FRANCESC XAVIER MARCE CAROL","1871-RAQUEL GIL EIROA","1875-FRANCESC XAVIER MARCE CAROL","1885-JAIME COLLBONI CUADRADO","1903-MIQUEL RODRIGUEZ PLANAS","1939-JORDI MARTI GRAU","1958-JORDI MARTI GRAU","1988-LAIA BONET RULL","1989-ELOI BADIA CASAS","2012-Laura PÉREZ CASTAÑO","2033-PABLO ANGEL SOLANILLA FRANCO","2114-JAIME COLLBONI CUADRADO","2129-FRANCESC XAVIER MARCE CAROL","2159-JANET SANZ CID","2217-DAVID ESCUDE RODRIGUEZ","2250- JOSEP M MONTANER MARTORELL","2251-LUCIA MARTIN GONZALEZ","2263-JOSE LUIS GOMEZ FERNANDEZ","2271- EMP MPAL INICIATIVAS EMPR DE MALAGA","2284-JAIME COLLBONI CUADRADO","2313-RAQUEL GIL EIROA","2315-FRANCESC XAVIER MARCE CAROL","2330-Laura PÉREZ CASTAÑO","2396-DAVID ESCUDE RODRIGUEZ","2435-PABLO ANGEL SOLANILLA FRANCO","2458-MICHAEL SERAFIN DONALDSON CARBON","2461-MIQUEL ÀNGEL ESSOMBA GELABERT","2525-Laura PÉREZ CASTAÑO","2526-JULIA TRIAS JURADO","2528- MONTSERRAT BALLARIN ESPUÑA","2548-LUCIA MARTIN GONZALEZ","2572-LUCIA MARTIN GONZALEZ","2637-MICHAEL SERAFIN DONALDSON CARBON","2688-DAVID ESCUDE RODRIGUEZ","2865-DAVID ESCUDE RODRIGUEZ","2877-JAIME COLLBONI CUADRADO","2886-DAVID ESCUDE RODRIGUEZ","2980-Laura PÉREZ CASTAÑO","3029-RAQUEL GIL EIROA","3038-FRANCESC XAVIER MARCE CAROL","3053-ALVARO PORRO GONZALEZ","3671-JOSE LUIS GOMEZ FERNANDEZ","3729-ALVARO PORRO GONZALEZ","3860-JOSE LUIS GOMEZ FERNANDEZ","4122-FRANCESC XAVIER MARCE CAROL","4232-JOSE LUIS GOMEZ FERNANDEZ","4340-ALVARO PORRO GONZALEZ","4372-LAIA BONET RULL","4385-FRANCESC XAVIER MARCE CAROL","4398-LAIA BONET RULL","4427-JOSE LUIS GOMEZ FERNANDEZ","4455- MONTSERRAT BALLARIN ESPUÑA","4520-LAIA BONET RULL","4530-FRANCESC XAVIER MARCE CAROL","4597-LAIA BONET RULL","4699-ALVARO PORRO GONZALEZ","4818-MIQUEL RODRIGUEZ PLANAS","4831-FRANCESC XAVIER MARCE CAROL","4998-MICHAEL SERAFIN DONALDSON CARBON","4999-MICHAEL SERAFIN DONALDSON CARBON","5001-FRANCESC XAVIER MARCE CAROL","5073-MIQUEL RODRIGUEZ PLANAS","5084-ALVARO PORRO GONZALEZ","5121-MARC SERRA SOLE","5141-LAIA BONET RULL","5157-LAIA BONET RULL","5203-JOAN SUBIRATS HUMET","5205-LAIA BONET RULL","5499-JORDI RABASSA MASSONS","5840-LAIA BONET RULL","5878-FRANCESC XAVIER MARCE CAROL","5886-MIQUEL RODRIGUEZ PLANAS","6048-LAIA BONET RULL"],"labels":["2021","2020","2019","2022","FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT","FRANCESC XAVIER MARCE CAROL"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","FREDERIC XIMENO ROCA","JANET SANZ CID","MIQUEL RODRIGUEZ PLANAS","LAIA BONET RULL","DAVID ESCUDE RODRIGUEZ","JANET SANZ CID","JOAN SUBIRATS HUMET","JOAN RAMON RIERA ALEMANY","GEMMA TARAFA ORPINELL"," MONTSERRAT BALLARIN ESPUÑA","RAQUEL GIL EIROA","ALBERT BATLLE BASTARDAS","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","LUCIA MARTIN GONZALEZ","AGUSTÍ COLOM CABAU","ALBERT BATLLE BASTARDAS","JANET SANZ CID","MARC SERRA SOLE","JULIA TRIAS JURADO","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","ELOI BADIA CASAS","LUCIA MARTIN GONZALEZ","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","Laura PÉREZ CASTAÑO","DAVID ESCUDE RODRIGUEZ","JAIME COLLBONI CUADRADO","ALVARO PORRO GONZALEZ","FRANCESC XAVIER MARCE CAROL","LAIA BONET RULL"," MONTSERRAT BALLARIN ESPUÑA","MIQUEL RODRIGUEZ PLANAS","MICHAEL SERAFIN DONALDSON CARBON","MARC SERRA SOLE","JOAN SUBIRATS HUMET","JORDI RABASSA MASSONS","MADRID","MADRID","MADRID","MADRID","MADRID","PARÍS","MADRID","MADRID","ESTRASBURG","HAVANA","MADRID","PORTO","MADRID","PARIS","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","ABU DHABI","CANCÚN","MADRID","SEVILLA","MADRID","NAPOLS","MADRID","MADRID","MADRID","RENNES","MADRID","LONDRES","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","COLÒNIA","MADRID","ERBIL","PARIS","ERMUA","MILA","LISBOA","OPORTO","MADRID","MADRID","MADRID","MADRID","CARDEDEU","MADRID","MADRID","MADRID","NOVA YORK","VALÈNCIA","NANTES","LISBOA","MADRID","MADRID","MUNIC","BUDAPEST","BARCELONA-MADRID-MEXICO CITY-LEON GUANAJUATO","MADRID","MADRID","MÀLAGA","MADRID","CANARIES","GRAN CANÀRIA","SEVILLA","SEVILLA","SEVILLA","AMSTERDAM","SEVILLA","MADRID","MILÀ","PALMA DE MALLORCA","MADRID","MADRID","GLASGOW","MADRID","MADRID","SANT SEBASTIÀ","VALÈNCIA","VALÈNCIA","VALÈNCIA","MADRID","LEIPZIG","GLASGOW","SARAJEVO","DUBAI","DUBAI","SEVILLA","MADRID","COPANHAGE","LYON","MADRID","EINDHOVEN","MÀLAGA","MADRID","PARÍS","MADRID","MONTPELLIER","PARÍS","PARÍS","MADRID","ZAGREB","MADRID","BRUSSEL.LES","MADRID","MADRID","AMSTERDAM","MADRID","MADRID","MADRID","MADRID","MADRID","LESBOS","PARIS","MADRID","SHEFFIELD","TOKIO","VALÈNCIA","PRAGA","HELSINKI","MADRID","MONTPELLIER","MADRID","BILBAO","NOVA YORK","TOKIO","PERPIGNAN","GINEBRA","MADRID","MADRID","MADRID","BRUSSEL.LES","BUENOS AIRES","VALÈNCIA","LONDRES","MADRID","DURBAN","BRUSSEL.LES","AMSTERDAM","BRUSSEL·LES","PRAGA","MILÀ","DURBAN","MADRID","MADRID","KIOTO","GINEBRA","PARÍS"],"parents":["","","","","2021","2021","2021","2020","2021","2019","2020","2019","2020","2020","2019","2022","2021","2021","2021","2020","2021","2021","2019","2021","2020","2020","2021","2019","2020","2019","2020","2020","2019","2021","2021","2021","2021","2021","2021","2021","2021","2019","2021","2020","2020","2020","2019","2019","2019","2019","2019","2019","2019","2019","2019","2021-FRANCESC XAVIER MARCE CAROL","2021-JAIME COLLBONI CUADRADO","2021-RAQUEL GIL EIROA","2020-LAIA BONET RULL","2021-Laura PÉREZ CASTAÑO","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2021-JAIME COLLBONI CUADRADO","2020-FRANCESC XAVIER MARCE CAROL","2019- JOSEP M MONTANER MARTORELL","2020-JOAN SUBIRATS HUMET","2020- MONTSERRAT BALLARIN ESPUÑA","2020-LAIA BONET RULL","2019-FREDERIC XIMENO ROCA","2022-JANET SANZ CID","2021-JAIME COLLBONI CUADRADO","2021-MIQUEL RODRIGUEZ PLANAS","2021-LAIA BONET RULL","2021-DAVID ESCUDE RODRIGUEZ","2021-FRANCESC XAVIER MARCE CAROL","2020-JANET SANZ CID","2021-JAIME COLLBONI CUADRADO","2020-LAIA BONET RULL","2021-FRANCESC XAVIER MARCE CAROL","2021-JOAN SUBIRATS HUMET","2021-DAVID ESCUDE RODRIGUEZ","2021-JOAN RAMON RIERA ALEMANY","2020-FRANCESC XAVIER MARCE CAROL","2020- MONTSERRAT BALLARIN ESPUÑA","2019-GEMMA TARAFA ORPINELL","2021- MONTSERRAT BALLARIN ESPUÑA","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2020-RAQUEL GIL EIROA","2020-RAQUEL GIL EIROA","2021-JOAN SUBIRATS HUMET","2021-FRANCESC XAVIER MARCE CAROL","2021-DAVID ESCUDE RODRIGUEZ","2020-ALBERT BATLLE BASTARDAS","2021-JAIME COLLBONI CUADRADO","2021-JAIME COLLBONI CUADRADO","2021-DAVID ESCUDE RODRIGUEZ","2021-MICHAEL SERAFIN DONALDSON CARBON","2021-Laura PÉREZ CASTAÑO","2021-JAIME COLLBONI CUADRADO","2021-MICHAEL SERAFIN DONALDSON CARBON","2019-FRANCESCA BRIA","2020-MARC SERRA SOLE","2021-FRANCESC XAVIER MARCE CAROL","2020-JANET SANZ CID","2021-JAIME COLLBONI CUADRADO","2020-MARC SERRA SOLE","2019- JORDI MARTI GRAU","2020-ALVARO PORRO GONZALEZ","2021-FRANCESC XAVIER MARCE CAROL","2020-LUCIA MARTIN GONZALEZ","2021-JAIME COLLBONI CUADRADO","2020-LAIA BONET RULL","2021-FRANCESC XAVIER MARCE CAROL","2021-FRANCESC XAVIER MARCE CAROL","2019-AGUSTÍ COLOM CABAU","2021-JAIME COLLBONI CUADRADO","2021-ALBERT BATLLE BASTARDAS","2021-JANET SANZ CID","2021-Laura PÉREZ CASTAÑO","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2021-MICHAEL SERAFIN DONALDSON CARBON","2021-LAIA BONET RULL","2021-MIQUEL RODRIGUEZ PLANAS","2021-FRANCESC XAVIER MARCE CAROL","2021-MARC SERRA SOLE","2021-JULIA TRIAS JURADO","2021-Laura PÉREZ CASTAÑO","2021-FRANCESC XAVIER MARCE CAROL","2021-MIQUEL RODRIGUEZ PLANAS","2021-MICHAEL SERAFIN DONALDSON CARBON","2021-MICHAEL SERAFIN DONALDSON CARBON","2021-DAVID ESCUDE RODRIGUEZ","2021-PABLO ANGEL SOLANILLA FRANCO","2021-JORDI MARTI GRAU","2021-JANET SANZ CID","2021-JAIME COLLBONI CUADRADO","2021-JANET SANZ CID","2021-FRANCESC XAVIER MARCE CAROL","2021-RAQUEL GIL EIROA","2021-FRANCESC XAVIER MARCE CAROL","2021-JAIME COLLBONI CUADRADO","2021-MIQUEL RODRIGUEZ PLANAS","2021-JORDI MARTI GRAU","2021-JORDI MARTI GRAU","2021-LAIA BONET RULL","2021-ELOI BADIA CASAS","2021-Laura PÉREZ CASTAÑO","2021-PABLO ANGEL SOLANILLA FRANCO","2021-JAIME COLLBONI CUADRADO","2021-FRANCESC XAVIER MARCE CAROL","2021-JANET SANZ CID","2021-DAVID ESCUDE RODRIGUEZ","2019- JOSEP M MONTANER MARTORELL","2021-LUCIA MARTIN GONZALEZ","2019-JOSE LUIS GOMEZ FERNANDEZ","2021- EMP MPAL INICIATIVAS EMPR DE MALAGA","2021-JAIME COLLBONI CUADRADO","2021-RAQUEL GIL EIROA","2021-FRANCESC XAVIER MARCE CAROL","2021-Laura PÉREZ CASTAÑO","2021-DAVID ESCUDE RODRIGUEZ","2021-PABLO ANGEL SOLANILLA FRANCO","2021-MICHAEL SERAFIN DONALDSON CARBON","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2020-Laura PÉREZ CASTAÑO","2021-JULIA TRIAS JURADO","2021- MONTSERRAT BALLARIN ESPUÑA","2021-LUCIA MARTIN GONZALEZ","2021-LUCIA MARTIN GONZALEZ","2021-MICHAEL SERAFIN DONALDSON CARBON","2020-DAVID ESCUDE RODRIGUEZ","2020-DAVID ESCUDE RODRIGUEZ","2020-JAIME COLLBONI CUADRADO","2020-DAVID ESCUDE RODRIGUEZ","2020-Laura PÉREZ CASTAÑO","2020-RAQUEL GIL EIROA","2020-FRANCESC XAVIER MARCE CAROL","2019-ALVARO PORRO GONZALEZ","2019-JOSE LUIS GOMEZ FERNANDEZ","2019-ALVARO PORRO GONZALEZ","2019-JOSE LUIS GOMEZ FERNANDEZ","2019-FRANCESC XAVIER MARCE CAROL","2019-JOSE LUIS GOMEZ FERNANDEZ","2019-ALVARO PORRO GONZALEZ","2019-LAIA BONET RULL","2019-FRANCESC XAVIER MARCE CAROL","2019-LAIA BONET RULL","2019-JOSE LUIS GOMEZ FERNANDEZ","2019- MONTSERRAT BALLARIN ESPUÑA","2019-LAIA BONET RULL","2019-FRANCESC XAVIER MARCE CAROL","2019-LAIA BONET RULL","2019-ALVARO PORRO GONZALEZ","2019-MIQUEL RODRIGUEZ PLANAS","2019-FRANCESC XAVIER MARCE CAROL","2019-MICHAEL SERAFIN DONALDSON CARBON","2019-MICHAEL SERAFIN DONALDSON CARBON","2019-FRANCESC XAVIER MARCE CAROL","2019-MIQUEL RODRIGUEZ PLANAS","2019-ALVARO PORRO GONZALEZ","2019-MARC SERRA SOLE","2019-LAIA BONET RULL","2019-LAIA BONET RULL","2019-JOAN SUBIRATS HUMET","2019-LAIA BONET RULL","2019-JORDI RABASSA MASSONS","2019-LAIA BONET RULL","2019-FRANCESC XAVIER MARCE CAROL","2019-MIQUEL RODRIGUEZ PLANAS","2019-LAIA BONET RULL"],"values":[72520.68,19451.63,38297.9,1212.63,11206.13,13853.2,2490.7,4303.37,7575.47,1289.12,2313.6,87.4,5122.94,293.4,215.5,1212.63,2157.15,1658.95,3122.97,1338.92,1047.39,1095.45,408.47,709.8,1084.3,362.56,3514.81,864.53,696.84,212.17,35.87,209,327.75,618.5,10674.88,2042.2,1072.38,6333.82,954.6,1428.32,853.96,13942.34,110,880,2071.8,739.03,1447.29,3974.88,8999.53,95.82,4422.36,452.6,812.99,358,387.15,972.1,1145.3,948.71,361.75,372.14,413.26,352.64,1367.4,14.5,5122.94,252.65,188.6,215.5,1212.63,603.4,449.66,221.6,356.15,504.35,990.77,430.95,1633.02,4209.95,333.2,501.68,1095.45,346.2,40.75,408.47,401.55,503.22,26.67,282.71,714.19,904.05,409.27,362.56,744.45,416.85,540.65,325.07,4994.24,1642.31,482.16,864.53,491.74,550,348.15,621.7,205.1,212.17,35.87,260.35,209,436.1,2120,592.55,327.2,327.75,866.64,618.5,743.35,650.27,141.05,259.27,230.15,1079.6,672.1,2042.2,836.45,426.92,635.48,387.45,1043.04,865.88,397.77,1910.49,376.64,78.25,1016.09,9280.91,263.05,416.49,362.08,479.6,240.44,187.7,390.26,1207.2,1428.32,611.9,4070.19,3447.17,681.82,572.37,587.27,72.9,80,1509.7,110,1650,1125.5,271.05,520,330.18,353.14,252.72,231.59,150,235.93,308.25,268.3,505.66,286.67,475.04,1349.77,739.03,246.99,730,774.92,600,182.7,5240.94,279.65,1146.53,252.2,576.67,339.94,269,604.05,3442.21,5468.5,95.82,291.4,710,223.7,160.02,558.3,1482.21,287.56,165.04,580.05,3354.28,484.98,812.99,370.2,535.88,358,2633.59,387.15,413.55,346.37,509.78,820],"domain":{"column":0},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"treemap"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"ids":["2021","2020","2019","2022","2021-FRANCESC XAVIER MARCE CAROL","2021-JAIME COLLBONI CUADRADO","2021-RAQUEL GIL EIROA","2020-LAIA BONET RULL","2021-Laura PÉREZ CASTAÑO","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2020-FRANCESC XAVIER MARCE CAROL","2019- JOSEP M MONTANER MARTORELL","2020-JOAN SUBIRATS HUMET","2020- MONTSERRAT BALLARIN ESPUÑA","2019-FREDERIC XIMENO ROCA","2022-JANET SANZ CID","2021-MIQUEL RODRIGUEZ PLANAS","2021-LAIA BONET RULL","2021-DAVID ESCUDE RODRIGUEZ","2020-JANET SANZ CID","2021-JOAN SUBIRATS HUMET","2021-JOAN RAMON RIERA ALEMANY","2019-GEMMA TARAFA ORPINELL","2021- MONTSERRAT BALLARIN ESPUÑA","2020-RAQUEL GIL EIROA","2020-ALBERT BATLLE BASTARDAS","2021-MICHAEL SERAFIN DONALDSON CARBON","2019-FRANCESCA BRIA","2020-MARC SERRA SOLE","2019- JORDI MARTI GRAU","2020-ALVARO PORRO GONZALEZ","2020-LUCIA MARTIN GONZALEZ","2019-AGUSTÍ COLOM CABAU","2021-ALBERT BATLLE BASTARDAS","2021-JANET SANZ CID","2021-MARC SERRA SOLE","2021-JULIA TRIAS JURADO","2021-PABLO ANGEL SOLANILLA FRANCO","2021-JORDI MARTI GRAU","2021-ELOI BADIA CASAS","2021-LUCIA MARTIN GONZALEZ","2019-JOSE LUIS GOMEZ FERNANDEZ","2021- EMP MPAL INICIATIVAS EMPR DE MALAGA","2020-Laura PÉREZ CASTAÑO","2020-DAVID ESCUDE RODRIGUEZ","2020-JAIME COLLBONI CUADRADO","2019-ALVARO PORRO GONZALEZ","2019-FRANCESC XAVIER MARCE CAROL","2019-LAIA BONET RULL","2019- MONTSERRAT BALLARIN ESPUÑA","2019-MIQUEL RODRIGUEZ PLANAS","2019-MICHAEL SERAFIN DONALDSON CARBON","2019-MARC SERRA SOLE","2019-JOAN SUBIRATS HUMET","2019-JORDI RABASSA MASSONS","21-FRANCESC XAVIER MARCE CAROL","23-JAIME COLLBONI CUADRADO","24-RAQUEL GIL EIROA","32-LAIA BONET RULL","44-Laura PÉREZ CASTAÑO","47-MIQUEL ÀNGEL ESSOMBA GELABERT","56-JAIME COLLBONI CUADRADO","63-FRANCESC XAVIER MARCE CAROL","70- JOSEP M MONTANER MARTORELL","106-JOAN SUBIRATS HUMET","110- MONTSERRAT BALLARIN ESPUÑA","231-LAIA BONET RULL","236-FREDERIC XIMENO ROCA","243-JANET SANZ CID","245-JAIME COLLBONI CUADRADO","255-MIQUEL RODRIGUEZ PLANAS","257-LAIA BONET RULL","283-DAVID ESCUDE RODRIGUEZ","294-FRANCESC XAVIER MARCE CAROL","312-JANET SANZ CID","324-JAIME COLLBONI CUADRADO","358-LAIA BONET RULL","443-FRANCESC XAVIER MARCE CAROL","497-JOAN SUBIRATS HUMET","499-DAVID ESCUDE RODRIGUEZ","520-JOAN RAMON RIERA ALEMANY","531-FRANCESC XAVIER MARCE CAROL","549- MONTSERRAT BALLARIN ESPUÑA","552-GEMMA TARAFA ORPINELL","557- MONTSERRAT BALLARIN ESPUÑA","570-MIQUEL ÀNGEL ESSOMBA GELABERT","604-RAQUEL GIL EIROA","605-RAQUEL GIL EIROA","621-JOAN SUBIRATS HUMET","685-FRANCESC XAVIER MARCE CAROL","693-DAVID ESCUDE RODRIGUEZ","709-ALBERT BATLLE BASTARDAS","732-JAIME COLLBONI CUADRADO","736-JAIME COLLBONI CUADRADO","839-DAVID ESCUDE RODRIGUEZ","878-MICHAEL SERAFIN DONALDSON CARBON","892-Laura PÉREZ CASTAÑO","920-JAIME COLLBONI CUADRADO","940-MICHAEL SERAFIN DONALDSON CARBON","944-FRANCESCA BRIA","979-MARC SERRA SOLE","980-FRANCESC XAVIER MARCE CAROL","988-JANET SANZ CID","1025-JAIME COLLBONI CUADRADO","1044-MARC SERRA SOLE","1081- JORDI MARTI GRAU","1114-ALVARO PORRO GONZALEZ","1120-FRANCESC XAVIER MARCE CAROL","1123-LUCIA MARTIN GONZALEZ","1171-JAIME COLLBONI CUADRADO","1201-LAIA BONET RULL","1264-FRANCESC XAVIER MARCE CAROL","1341-FRANCESC XAVIER MARCE CAROL","1367-AGUSTÍ COLOM CABAU","1388-JAIME COLLBONI CUADRADO","1389-ALBERT BATLLE BASTARDAS","1413-JANET SANZ CID","1414-Laura PÉREZ CASTAÑO","1433-MIQUEL ÀNGEL ESSOMBA GELABERT","1486-MICHAEL SERAFIN DONALDSON CARBON","1495-LAIA BONET RULL","1519-MIQUEL RODRIGUEZ PLANAS","1566-FRANCESC XAVIER MARCE CAROL","1600-MARC SERRA SOLE","1601-JULIA TRIAS JURADO","1682-Laura PÉREZ CASTAÑO","1690-FRANCESC XAVIER MARCE CAROL","1698-MIQUEL RODRIGUEZ PLANAS","1700-MICHAEL SERAFIN DONALDSON CARBON","1776-MICHAEL SERAFIN DONALDSON CARBON","1777-DAVID ESCUDE RODRIGUEZ","1782-PABLO ANGEL SOLANILLA FRANCO","1810-JORDI MARTI GRAU","1823-JANET SANZ CID","1825-JAIME COLLBONI CUADRADO","1831-JANET SANZ CID","1832-FRANCESC XAVIER MARCE CAROL","1871-RAQUEL GIL EIROA","1875-FRANCESC XAVIER MARCE CAROL","1885-JAIME COLLBONI CUADRADO","1903-MIQUEL RODRIGUEZ PLANAS","1939-JORDI MARTI GRAU","1958-JORDI MARTI GRAU","1988-LAIA BONET RULL","1989-ELOI BADIA CASAS","2012-Laura PÉREZ CASTAÑO","2033-PABLO ANGEL SOLANILLA FRANCO","2114-JAIME COLLBONI CUADRADO","2129-FRANCESC XAVIER MARCE CAROL","2159-JANET SANZ CID","2217-DAVID ESCUDE RODRIGUEZ","2250- JOSEP M MONTANER MARTORELL","2251-LUCIA MARTIN GONZALEZ","2263-JOSE LUIS GOMEZ FERNANDEZ","2271- EMP MPAL INICIATIVAS EMPR DE MALAGA","2284-JAIME COLLBONI CUADRADO","2313-RAQUEL GIL EIROA","2315-FRANCESC XAVIER MARCE CAROL","2330-Laura PÉREZ CASTAÑO","2396-DAVID ESCUDE RODRIGUEZ","2435-PABLO ANGEL SOLANILLA FRANCO","2458-MICHAEL SERAFIN DONALDSON CARBON","2461-MIQUEL ÀNGEL ESSOMBA GELABERT","2525-Laura PÉREZ CASTAÑO","2526-JULIA TRIAS JURADO","2528- MONTSERRAT BALLARIN ESPUÑA","2548-LUCIA MARTIN GONZALEZ","2572-LUCIA MARTIN GONZALEZ","2637-MICHAEL SERAFIN DONALDSON CARBON","2688-DAVID ESCUDE RODRIGUEZ","2865-DAVID ESCUDE RODRIGUEZ","2877-JAIME COLLBONI CUADRADO","2886-DAVID ESCUDE RODRIGUEZ","2980-Laura PÉREZ CASTAÑO","3029-RAQUEL GIL EIROA","3038-FRANCESC XAVIER MARCE CAROL","3053-ALVARO PORRO GONZALEZ","3671-JOSE LUIS GOMEZ FERNANDEZ","3729-ALVARO PORRO GONZALEZ","3860-JOSE LUIS GOMEZ FERNANDEZ","4122-FRANCESC XAVIER MARCE CAROL","4232-JOSE LUIS GOMEZ FERNANDEZ","4340-ALVARO PORRO GONZALEZ","4372-LAIA BONET RULL","4385-FRANCESC XAVIER MARCE CAROL","4398-LAIA BONET RULL","4427-JOSE LUIS GOMEZ FERNANDEZ","4455- MONTSERRAT BALLARIN ESPUÑA","4520-LAIA BONET RULL","4530-FRANCESC XAVIER MARCE CAROL","4597-LAIA BONET RULL","4699-ALVARO PORRO GONZALEZ","4818-MIQUEL RODRIGUEZ PLANAS","4831-FRANCESC XAVIER MARCE CAROL","4998-MICHAEL SERAFIN DONALDSON CARBON","4999-MICHAEL SERAFIN DONALDSON CARBON","5001-FRANCESC XAVIER MARCE CAROL","5073-MIQUEL RODRIGUEZ PLANAS","5084-ALVARO PORRO GONZALEZ","5121-MARC SERRA SOLE","5141-LAIA BONET RULL","5157-LAIA BONET RULL","5203-JOAN SUBIRATS HUMET","5205-LAIA BONET RULL","5499-JORDI RABASSA MASSONS","5840-LAIA BONET RULL","5878-FRANCESC XAVIER MARCE CAROL","5886-MIQUEL RODRIGUEZ PLANAS","6048-LAIA BONET RULL"],"labels":["2021","2020","2019","2022","FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT","FRANCESC XAVIER MARCE CAROL"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","FREDERIC XIMENO ROCA","JANET SANZ CID","MIQUEL RODRIGUEZ PLANAS","LAIA BONET RULL","DAVID ESCUDE RODRIGUEZ","JANET SANZ CID","JOAN SUBIRATS HUMET","JOAN RAMON RIERA ALEMANY","GEMMA TARAFA ORPINELL"," MONTSERRAT BALLARIN ESPUÑA","RAQUEL GIL EIROA","ALBERT BATLLE BASTARDAS","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","LUCIA MARTIN GONZALEZ","AGUSTÍ COLOM CABAU","ALBERT BATLLE BASTARDAS","JANET SANZ CID","MARC SERRA SOLE","JULIA TRIAS JURADO","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","ELOI BADIA CASAS","LUCIA MARTIN GONZALEZ","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","Laura PÉREZ CASTAÑO","DAVID ESCUDE RODRIGUEZ","JAIME COLLBONI CUADRADO","ALVARO PORRO GONZALEZ","FRANCESC XAVIER MARCE CAROL","LAIA BONET RULL"," MONTSERRAT BALLARIN ESPUÑA","MIQUEL RODRIGUEZ PLANAS","MICHAEL SERAFIN DONALDSON CARBON","MARC SERRA SOLE","JOAN SUBIRATS HUMET","JORDI RABASSA MASSONS","MADRID","MADRID","MADRID","MADRID","MADRID","PARÍS","MADRID","MADRID","ESTRASBURG","HAVANA","MADRID","PORTO","MADRID","PARIS","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","ABU DHABI","CANCÚN","MADRID","SEVILLA","MADRID","NAPOLS","MADRID","MADRID","MADRID","RENNES","MADRID","LONDRES","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","COLÒNIA","MADRID","ERBIL","PARIS","ERMUA","MILA","LISBOA","OPORTO","MADRID","MADRID","MADRID","MADRID","CARDEDEU","MADRID","MADRID","MADRID","NOVA YORK","VALÈNCIA","NANTES","LISBOA","MADRID","MADRID","MUNIC","BUDAPEST","BARCELONA-MADRID-MEXICO CITY-LEON GUANAJUATO","MADRID","MADRID","MÀLAGA","MADRID","CANARIES","GRAN CANÀRIA","SEVILLA","SEVILLA","SEVILLA","AMSTERDAM","SEVILLA","MADRID","MILÀ","PALMA DE MALLORCA","MADRID","MADRID","GLASGOW","MADRID","MADRID","SANT SEBASTIÀ","VALÈNCIA","VALÈNCIA","VALÈNCIA","MADRID","LEIPZIG","GLASGOW","SARAJEVO","DUBAI","DUBAI","SEVILLA","MADRID","COPANHAGE","LYON","MADRID","EINDHOVEN","MÀLAGA","MADRID","PARÍS","MADRID","MONTPELLIER","PARÍS","PARÍS","MADRID","ZAGREB","MADRID","BRUSSEL.LES","MADRID","MADRID","AMSTERDAM","MADRID","MADRID","MADRID","MADRID","MADRID","LESBOS","PARIS","MADRID","SHEFFIELD","TOKIO","VALÈNCIA","PRAGA","HELSINKI","MADRID","MONTPELLIER","MADRID","BILBAO","NOVA YORK","TOKIO","PERPIGNAN","GINEBRA","MADRID","MADRID","MADRID","BRUSSEL.LES","BUENOS AIRES","VALÈNCIA","LONDRES","MADRID","DURBAN","BRUSSEL.LES","AMSTERDAM","BRUSSEL·LES","PRAGA","MILÀ","DURBAN","MADRID","MADRID","KIOTO","GINEBRA","PARÍS"],"parents":["","","","","2021","2021","2021","2020","2021","2019","2020","2019","2020","2020","2019","2022","2021","2021","2021","2020","2021","2021","2019","2021","2020","2020","2021","2019","2020","2019","2020","2020","2019","2021","2021","2021","2021","2021","2021","2021","2021","2019","2021","2020","2020","2020","2019","2019","2019","2019","2019","2019","2019","2019","2019","2021-FRANCESC XAVIER MARCE CAROL","2021-JAIME COLLBONI CUADRADO","2021-RAQUEL GIL EIROA","2020-LAIA BONET RULL","2021-Laura PÉREZ CASTAÑO","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2021-JAIME COLLBONI CUADRADO","2020-FRANCESC XAVIER MARCE CAROL","2019- JOSEP M MONTANER MARTORELL","2020-JOAN SUBIRATS HUMET","2020- MONTSERRAT BALLARIN ESPUÑA","2020-LAIA BONET RULL","2019-FREDERIC XIMENO ROCA","2022-JANET SANZ CID","2021-JAIME COLLBONI CUADRADO","2021-MIQUEL RODRIGUEZ PLANAS","2021-LAIA BONET RULL","2021-DAVID ESCUDE RODRIGUEZ","2021-FRANCESC XAVIER MARCE CAROL","2020-JANET SANZ CID","2021-JAIME COLLBONI CUADRADO","2020-LAIA BONET RULL","2021-FRANCESC XAVIER MARCE CAROL","2021-JOAN SUBIRATS HUMET","2021-DAVID ESCUDE RODRIGUEZ","2021-JOAN RAMON RIERA ALEMANY","2020-FRANCESC XAVIER MARCE CAROL","2020- MONTSERRAT BALLARIN ESPUÑA","2019-GEMMA TARAFA ORPINELL","2021- MONTSERRAT BALLARIN ESPUÑA","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2020-RAQUEL GIL EIROA","2020-RAQUEL GIL EIROA","2021-JOAN SUBIRATS HUMET","2021-FRANCESC XAVIER MARCE CAROL","2021-DAVID ESCUDE RODRIGUEZ","2020-ALBERT BATLLE BASTARDAS","2021-JAIME COLLBONI CUADRADO","2021-JAIME COLLBONI CUADRADO","2021-DAVID ESCUDE RODRIGUEZ","2021-MICHAEL SERAFIN DONALDSON CARBON","2021-Laura PÉREZ CASTAÑO","2021-JAIME COLLBONI CUADRADO","2021-MICHAEL SERAFIN DONALDSON CARBON","2019-FRANCESCA BRIA","2020-MARC SERRA SOLE","2021-FRANCESC XAVIER MARCE CAROL","2020-JANET SANZ CID","2021-JAIME COLLBONI CUADRADO","2020-MARC SERRA SOLE","2019- JORDI MARTI GRAU","2020-ALVARO PORRO GONZALEZ","2021-FRANCESC XAVIER MARCE CAROL","2020-LUCIA MARTIN GONZALEZ","2021-JAIME COLLBONI CUADRADO","2020-LAIA BONET RULL","2021-FRANCESC XAVIER MARCE CAROL","2021-FRANCESC XAVIER MARCE CAROL","2019-AGUSTÍ COLOM CABAU","2021-JAIME COLLBONI CUADRADO","2021-ALBERT BATLLE BASTARDAS","2021-JANET SANZ CID","2021-Laura PÉREZ CASTAÑO","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2021-MICHAEL SERAFIN DONALDSON CARBON","2021-LAIA BONET RULL","2021-MIQUEL RODRIGUEZ PLANAS","2021-FRANCESC XAVIER MARCE CAROL","2021-MARC SERRA SOLE","2021-JULIA TRIAS JURADO","2021-Laura PÉREZ CASTAÑO","2021-FRANCESC XAVIER MARCE CAROL","2021-MIQUEL RODRIGUEZ PLANAS","2021-MICHAEL SERAFIN DONALDSON CARBON","2021-MICHAEL SERAFIN DONALDSON CARBON","2021-DAVID ESCUDE RODRIGUEZ","2021-PABLO ANGEL SOLANILLA FRANCO","2021-JORDI MARTI GRAU","2021-JANET SANZ CID","2021-JAIME COLLBONI CUADRADO","2021-JANET SANZ CID","2021-FRANCESC XAVIER MARCE CAROL","2021-RAQUEL GIL EIROA","2021-FRANCESC XAVIER MARCE CAROL","2021-JAIME COLLBONI CUADRADO","2021-MIQUEL RODRIGUEZ PLANAS","2021-JORDI MARTI GRAU","2021-JORDI MARTI GRAU","2021-LAIA BONET RULL","2021-ELOI BADIA CASAS","2021-Laura PÉREZ CASTAÑO","2021-PABLO ANGEL SOLANILLA FRANCO","2021-JAIME COLLBONI CUADRADO","2021-FRANCESC XAVIER MARCE CAROL","2021-JANET SANZ CID","2021-DAVID ESCUDE RODRIGUEZ","2019- JOSEP M MONTANER MARTORELL","2021-LUCIA MARTIN GONZALEZ","2019-JOSE LUIS GOMEZ FERNANDEZ","2021- EMP MPAL INICIATIVAS EMPR DE MALAGA","2021-JAIME COLLBONI CUADRADO","2021-RAQUEL GIL EIROA","2021-FRANCESC XAVIER MARCE CAROL","2021-Laura PÉREZ CASTAÑO","2021-DAVID ESCUDE RODRIGUEZ","2021-PABLO ANGEL SOLANILLA FRANCO","2021-MICHAEL SERAFIN DONALDSON CARBON","2019-MIQUEL ÀNGEL ESSOMBA GELABERT","2020-Laura PÉREZ CASTAÑO","2021-JULIA TRIAS JURADO","2021- MONTSERRAT BALLARIN ESPUÑA","2021-LUCIA MARTIN GONZALEZ","2021-LUCIA MARTIN GONZALEZ","2021-MICHAEL SERAFIN DONALDSON CARBON","2020-DAVID ESCUDE RODRIGUEZ","2020-DAVID ESCUDE RODRIGUEZ","2020-JAIME COLLBONI CUADRADO","2020-DAVID ESCUDE RODRIGUEZ","2020-Laura PÉREZ CASTAÑO","2020-RAQUEL GIL EIROA","2020-FRANCESC XAVIER MARCE CAROL","2019-ALVARO PORRO GONZALEZ","2019-JOSE LUIS GOMEZ FERNANDEZ","2019-ALVARO PORRO GONZALEZ","2019-JOSE LUIS GOMEZ FERNANDEZ","2019-FRANCESC XAVIER MARCE CAROL","2019-JOSE LUIS GOMEZ FERNANDEZ","2019-ALVARO PORRO GONZALEZ","2019-LAIA BONET RULL","2019-FRANCESC XAVIER MARCE CAROL","2019-LAIA BONET RULL","2019-JOSE LUIS GOMEZ FERNANDEZ","2019- MONTSERRAT BALLARIN ESPUÑA","2019-LAIA BONET RULL","2019-FRANCESC XAVIER MARCE CAROL","2019-LAIA BONET RULL","2019-ALVARO PORRO GONZALEZ","2019-MIQUEL RODRIGUEZ PLANAS","2019-FRANCESC XAVIER MARCE CAROL","2019-MICHAEL SERAFIN DONALDSON CARBON","2019-MICHAEL SERAFIN DONALDSON CARBON","2019-FRANCESC XAVIER MARCE CAROL","2019-MIQUEL RODRIGUEZ PLANAS","2019-ALVARO PORRO GONZALEZ","2019-MARC SERRA SOLE","2019-LAIA BONET RULL","2019-LAIA BONET RULL","2019-JOAN SUBIRATS HUMET","2019-LAIA BONET RULL","2019-JORDI RABASSA MASSONS","2019-LAIA BONET RULL","2019-FRANCESC XAVIER MARCE CAROL","2019-MIQUEL RODRIGUEZ PLANAS","2019-LAIA BONET RULL"],"values":[72520.68,19451.63,38297.9,1212.63,11206.13,13853.2,2490.7,4303.37,7575.47,1289.12,2313.6,87.4,5122.94,293.4,215.5,1212.63,2157.15,1658.95,3122.97,1338.92,1047.39,1095.45,408.47,709.8,1084.3,362.56,3514.81,864.53,696.84,212.17,35.87,209,327.75,618.5,10674.88,2042.2,1072.38,6333.82,954.6,1428.32,853.96,13942.34,110,880,2071.8,739.03,1447.29,3974.88,8999.53,95.82,4422.36,452.6,812.99,358,387.15,972.1,1145.3,948.71,361.75,372.14,413.26,352.64,1367.4,14.5,5122.94,252.65,188.6,215.5,1212.63,603.4,449.66,221.6,356.15,504.35,990.77,430.95,1633.02,4209.95,333.2,501.68,1095.45,346.2,40.75,408.47,401.55,503.22,26.67,282.71,714.19,904.05,409.27,362.56,744.45,416.85,540.65,325.07,4994.24,1642.31,482.16,864.53,491.74,550,348.15,621.7,205.1,212.17,35.87,260.35,209,436.1,2120,592.55,327.2,327.75,866.64,618.5,743.35,650.27,141.05,259.27,230.15,1079.6,672.1,2042.2,836.45,426.92,635.48,387.45,1043.04,865.88,397.77,1910.49,376.64,78.25,1016.09,9280.91,263.05,416.49,362.08,479.6,240.44,187.7,390.26,1207.2,1428.32,611.9,4070.19,3447.17,681.82,572.37,587.27,72.9,80,1509.7,110,1650,1125.5,271.05,520,330.18,353.14,252.72,231.59,150,235.93,308.25,268.3,505.66,286.67,475.04,1349.77,739.03,246.99,730,774.92,600,182.7,5240.94,279.65,1146.53,252.2,576.67,339.94,269,604.05,3442.21,5468.5,95.82,291.4,710,223.7,160.02,558.3,1482.21,287.56,165.04,580.05,3354.28,484.98,812.99,370.2,535.88,358,2633.59,387.15,413.55,346.37,509.78,820],"domain":{"column":0},"type":"treemap","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>By clicking on the rectangles</p>
+<p>Another way of looking at the data is by first aggregating by council member and then by year:</p>
+<div id="htmlwidget-3" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"visdat":{"1bf3159c12e8":["function () ","plotlyVisDat"]},"cur_data":"1bf3159c12e8","attrs":{"1bf3159c12e8":{"ids":["FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","FREDERIC XIMENO ROCA","JANET SANZ CID","MIQUEL RODRIGUEZ PLANAS","DAVID ESCUDE RODRIGUEZ","JOAN RAMON RIERA ALEMANY","GEMMA TARAFA ORPINELL","ALBERT BATLLE BASTARDAS","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","LUCIA MARTIN GONZALEZ","AGUSTÍ COLOM CABAU","JULIA TRIAS JURADO","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","ELOI BADIA CASAS","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","JORDI RABASSA MASSONS","FRANCESC XAVIER MARCE CAROL-2021","JAIME COLLBONI CUADRADO-2021","RAQUEL GIL EIROA-2021","LAIA BONET RULL-2020","Laura PÉREZ CASTAÑO-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","FRANCESC XAVIER MARCE CAROL-2020"," JOSEP M MONTANER MARTORELL-2019","JOAN SUBIRATS HUMET-2020"," MONTSERRAT BALLARIN ESPUÑA-2020","FREDERIC XIMENO ROCA-2019","JANET SANZ CID-2022","MIQUEL RODRIGUEZ PLANAS-2021","LAIA BONET RULL-2021","DAVID ESCUDE RODRIGUEZ-2021","JANET SANZ CID-2020","JOAN SUBIRATS HUMET-2021","JOAN RAMON RIERA ALEMANY-2021","GEMMA TARAFA ORPINELL-2019"," MONTSERRAT BALLARIN ESPUÑA-2021","RAQUEL GIL EIROA-2020","ALBERT BATLLE BASTARDAS-2020","MICHAEL SERAFIN DONALDSON CARBON-2021","FRANCESCA BRIA-2019","MARC SERRA SOLE-2020"," JORDI MARTI GRAU-2019","ALVARO PORRO GONZALEZ-2020","LUCIA MARTIN GONZALEZ-2020","AGUSTÍ COLOM CABAU-2019","ALBERT BATLLE BASTARDAS-2021","JANET SANZ CID-2021","MARC SERRA SOLE-2021","JULIA TRIAS JURADO-2021","PABLO ANGEL SOLANILLA FRANCO-2021","JORDI MARTI GRAU-2021","ELOI BADIA CASAS-2021","LUCIA MARTIN GONZALEZ-2021","JOSE LUIS GOMEZ FERNANDEZ-2019"," EMP MPAL INICIATIVAS EMPR DE MALAGA-2021","Laura PÉREZ CASTAÑO-2020","DAVID ESCUDE RODRIGUEZ-2020","JAIME COLLBONI CUADRADO-2020","ALVARO PORRO GONZALEZ-2019","FRANCESC XAVIER MARCE CAROL-2019","LAIA BONET RULL-2019"," MONTSERRAT BALLARIN ESPUÑA-2019","MIQUEL RODRIGUEZ PLANAS-2019","MICHAEL SERAFIN DONALDSON CARBON-2019","MARC SERRA SOLE-2019","JOAN SUBIRATS HUMET-2019","JORDI RABASSA MASSONS-2019","21-2021","23-2021","24-2021","32-2020","44-2021","47-2019","56-2021","63-2020","70-2019","106-2020","110-2020","231-2020","236-2019","243-2022","245-2021","255-2021","257-2021","283-2021","294-2021","312-2020","324-2021","358-2020","443-2021","497-2021","499-2021","520-2021","531-2020","549-2020","552-2019","557-2021","570-2019","604-2020","605-2020","621-2021","685-2021","693-2021","709-2020","732-2021","736-2021","839-2021","878-2021","892-2021","920-2021","940-2021","944-2019","979-2020","980-2021","988-2020","1025-2021","1044-2020","1081-2019","1114-2020","1120-2021","1123-2020","1171-2021","1201-2020","1264-2021","1341-2021","1367-2019","1388-2021","1389-2021","1413-2021","1414-2021","1433-2019","1486-2021","1495-2021","1519-2021","1566-2021","1600-2021","1601-2021","1682-2021","1690-2021","1698-2021","1700-2021","1776-2021","1777-2021","1782-2021","1810-2021","1823-2021","1825-2021","1831-2021","1832-2021","1871-2021","1875-2021","1885-2021","1903-2021","1939-2021","1958-2021","1988-2021","1989-2021","2012-2021","2033-2021","2114-2021","2129-2021","2159-2021","2217-2021","2250-2019","2251-2021","2263-2019","2271-2021","2284-2021","2313-2021","2315-2021","2330-2021","2396-2021","2435-2021","2458-2021","2461-2019","2525-2020","2526-2021","2528-2021","2548-2021","2572-2021","2637-2021","2688-2020","2865-2020","2877-2020","2886-2020","2980-2020","3029-2020","3038-2020","3053-2019","3671-2019","3729-2019","3860-2019","4122-2019","4232-2019","4340-2019","4372-2019","4385-2019","4398-2019","4427-2019","4455-2019","4520-2019","4530-2019","4597-2019","4699-2019","4818-2019","4831-2019","4998-2019","4999-2019","5001-2019","5073-2019","5084-2019","5121-2019","5141-2019","5157-2019","5203-2019","5205-2019","5499-2019","5840-2019","5878-2019","5886-2019","6048-2019"],"labels":["FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","FREDERIC XIMENO ROCA","JANET SANZ CID","MIQUEL RODRIGUEZ PLANAS","DAVID ESCUDE RODRIGUEZ","JOAN RAMON RIERA ALEMANY","GEMMA TARAFA ORPINELL","ALBERT BATLLE BASTARDAS","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","LUCIA MARTIN GONZALEZ","AGUSTÍ COLOM CABAU","JULIA TRIAS JURADO","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","ELOI BADIA CASAS","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","JORDI RABASSA MASSONS","2021","2021","2021","2020","2021","2019","2020","2019","2020","2020","2019","2022","2021","2021","2021","2020","2021","2021","2019","2021","2020","2020","2021","2019","2020","2019","2020","2020","2019","2021","2021","2021","2021","2021","2021","2021","2021","2019","2021","2020","2020","2020","2019","2019","2019","2019","2019","2019","2019","2019","2019","MADRID","MADRID","MADRID","MADRID","MADRID","PARÍS","MADRID","MADRID","ESTRASBURG","HAVANA","MADRID","PORTO","MADRID","PARIS","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","ABU DHABI","CANCÚN","MADRID","SEVILLA","MADRID","NAPOLS","MADRID","MADRID","MADRID","RENNES","MADRID","LONDRES","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","COLÒNIA","MADRID","ERBIL","PARIS","ERMUA","MILA","LISBOA","OPORTO","MADRID","MADRID","MADRID","MADRID","CARDEDEU","MADRID","MADRID","MADRID","NOVA YORK","VALÈNCIA","NANTES","LISBOA","MADRID","MADRID","MUNIC","BUDAPEST","BARCELONA-MADRID-MEXICO CITY-LEON GUANAJUATO","MADRID","MADRID","MÀLAGA","MADRID","CANARIES","GRAN CANÀRIA","SEVILLA","SEVILLA","SEVILLA","AMSTERDAM","SEVILLA","MADRID","MILÀ","PALMA DE MALLORCA","MADRID","MADRID","GLASGOW","MADRID","MADRID","SANT SEBASTIÀ","VALÈNCIA","VALÈNCIA","VALÈNCIA","MADRID","LEIPZIG","GLASGOW","SARAJEVO","DUBAI","DUBAI","SEVILLA","MADRID","COPANHAGE","LYON","MADRID","EINDHOVEN","MÀLAGA","MADRID","PARÍS","MADRID","MONTPELLIER","PARÍS","PARÍS","MADRID","ZAGREB","MADRID","BRUSSEL.LES","MADRID","MADRID","AMSTERDAM","MADRID","MADRID","MADRID","MADRID","MADRID","LESBOS","PARIS","MADRID","SHEFFIELD","TOKIO","VALÈNCIA","PRAGA","HELSINKI","MADRID","MONTPELLIER","MADRID","BILBAO","NOVA YORK","TOKIO","PERPIGNAN","GINEBRA","MADRID","MADRID","MADRID","BRUSSEL.LES","BUENOS AIRES","VALÈNCIA","LONDRES","MADRID","DURBAN","BRUSSEL.LES","AMSTERDAM","BRUSSEL·LES","PRAGA","MILÀ","DURBAN","MADRID","MADRID","KIOTO","GINEBRA","PARÍS"],"parents":["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT","FRANCESC XAVIER MARCE CAROL"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","FREDERIC XIMENO ROCA","JANET SANZ CID","MIQUEL RODRIGUEZ PLANAS","LAIA BONET RULL","DAVID ESCUDE RODRIGUEZ","JANET SANZ CID","JOAN SUBIRATS HUMET","JOAN RAMON RIERA ALEMANY","GEMMA TARAFA ORPINELL"," MONTSERRAT BALLARIN ESPUÑA","RAQUEL GIL EIROA","ALBERT BATLLE BASTARDAS","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","LUCIA MARTIN GONZALEZ","AGUSTÍ COLOM CABAU","ALBERT BATLLE BASTARDAS","JANET SANZ CID","MARC SERRA SOLE","JULIA TRIAS JURADO","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","ELOI BADIA CASAS","LUCIA MARTIN GONZALEZ","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","Laura PÉREZ CASTAÑO","DAVID ESCUDE RODRIGUEZ","JAIME COLLBONI CUADRADO","ALVARO PORRO GONZALEZ","FRANCESC XAVIER MARCE CAROL","LAIA BONET RULL"," MONTSERRAT BALLARIN ESPUÑA","MIQUEL RODRIGUEZ PLANAS","MICHAEL SERAFIN DONALDSON CARBON","MARC SERRA SOLE","JOAN SUBIRATS HUMET","JORDI RABASSA MASSONS","FRANCESC XAVIER MARCE CAROL-2021","JAIME COLLBONI CUADRADO-2021","RAQUEL GIL EIROA-2021","LAIA BONET RULL-2020","Laura PÉREZ CASTAÑO-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","JAIME COLLBONI CUADRADO-2021","FRANCESC XAVIER MARCE CAROL-2020"," JOSEP M MONTANER MARTORELL-2019","JOAN SUBIRATS HUMET-2020"," MONTSERRAT BALLARIN ESPUÑA-2020","LAIA BONET RULL-2020","FREDERIC XIMENO ROCA-2019","JANET SANZ CID-2022","JAIME COLLBONI CUADRADO-2021","MIQUEL RODRIGUEZ PLANAS-2021","LAIA BONET RULL-2021","DAVID ESCUDE RODRIGUEZ-2021","FRANCESC XAVIER MARCE CAROL-2021","JANET SANZ CID-2020","JAIME COLLBONI CUADRADO-2021","LAIA BONET RULL-2020","FRANCESC XAVIER MARCE CAROL-2021","JOAN SUBIRATS HUMET-2021","DAVID ESCUDE RODRIGUEZ-2021","JOAN RAMON RIERA ALEMANY-2021","FRANCESC XAVIER MARCE CAROL-2020"," MONTSERRAT BALLARIN ESPUÑA-2020","GEMMA TARAFA ORPINELL-2019"," MONTSERRAT BALLARIN ESPUÑA-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","RAQUEL GIL EIROA-2020","RAQUEL GIL EIROA-2020","JOAN SUBIRATS HUMET-2021","FRANCESC XAVIER MARCE CAROL-2021","DAVID ESCUDE RODRIGUEZ-2021","ALBERT BATLLE BASTARDAS-2020","JAIME COLLBONI CUADRADO-2021","JAIME COLLBONI CUADRADO-2021","DAVID ESCUDE RODRIGUEZ-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","Laura PÉREZ CASTAÑO-2021","JAIME COLLBONI CUADRADO-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","FRANCESCA BRIA-2019","MARC SERRA SOLE-2020","FRANCESC XAVIER MARCE CAROL-2021","JANET SANZ CID-2020","JAIME COLLBONI CUADRADO-2021","MARC SERRA SOLE-2020"," JORDI MARTI GRAU-2019","ALVARO PORRO GONZALEZ-2020","FRANCESC XAVIER MARCE CAROL-2021","LUCIA MARTIN GONZALEZ-2020","JAIME COLLBONI CUADRADO-2021","LAIA BONET RULL-2020","FRANCESC XAVIER MARCE CAROL-2021","FRANCESC XAVIER MARCE CAROL-2021","AGUSTÍ COLOM CABAU-2019","JAIME COLLBONI CUADRADO-2021","ALBERT BATLLE BASTARDAS-2021","JANET SANZ CID-2021","Laura PÉREZ CASTAÑO-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","MICHAEL SERAFIN DONALDSON CARBON-2021","LAIA BONET RULL-2021","MIQUEL RODRIGUEZ PLANAS-2021","FRANCESC XAVIER MARCE CAROL-2021","MARC SERRA SOLE-2021","JULIA TRIAS JURADO-2021","Laura PÉREZ CASTAÑO-2021","FRANCESC XAVIER MARCE CAROL-2021","MIQUEL RODRIGUEZ PLANAS-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","DAVID ESCUDE RODRIGUEZ-2021","PABLO ANGEL SOLANILLA FRANCO-2021","JORDI MARTI GRAU-2021","JANET SANZ CID-2021","JAIME COLLBONI CUADRADO-2021","JANET SANZ CID-2021","FRANCESC XAVIER MARCE CAROL-2021","RAQUEL GIL EIROA-2021","FRANCESC XAVIER MARCE CAROL-2021","JAIME COLLBONI CUADRADO-2021","MIQUEL RODRIGUEZ PLANAS-2021","JORDI MARTI GRAU-2021","JORDI MARTI GRAU-2021","LAIA BONET RULL-2021","ELOI BADIA CASAS-2021","Laura PÉREZ CASTAÑO-2021","PABLO ANGEL SOLANILLA FRANCO-2021","JAIME COLLBONI CUADRADO-2021","FRANCESC XAVIER MARCE CAROL-2021","JANET SANZ CID-2021","DAVID ESCUDE RODRIGUEZ-2021"," JOSEP M MONTANER MARTORELL-2019","LUCIA MARTIN GONZALEZ-2021","JOSE LUIS GOMEZ FERNANDEZ-2019"," EMP MPAL INICIATIVAS EMPR DE MALAGA-2021","JAIME COLLBONI CUADRADO-2021","RAQUEL GIL EIROA-2021","FRANCESC XAVIER MARCE CAROL-2021","Laura PÉREZ CASTAÑO-2021","DAVID ESCUDE RODRIGUEZ-2021","PABLO ANGEL SOLANILLA FRANCO-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","Laura PÉREZ CASTAÑO-2020","JULIA TRIAS JURADO-2021"," MONTSERRAT BALLARIN ESPUÑA-2021","LUCIA MARTIN GONZALEZ-2021","LUCIA MARTIN GONZALEZ-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","DAVID ESCUDE RODRIGUEZ-2020","DAVID ESCUDE RODRIGUEZ-2020","JAIME COLLBONI CUADRADO-2020","DAVID ESCUDE RODRIGUEZ-2020","Laura PÉREZ CASTAÑO-2020","RAQUEL GIL EIROA-2020","FRANCESC XAVIER MARCE CAROL-2020","ALVARO PORRO GONZALEZ-2019","JOSE LUIS GOMEZ FERNANDEZ-2019","ALVARO PORRO GONZALEZ-2019","JOSE LUIS GOMEZ FERNANDEZ-2019","FRANCESC XAVIER MARCE CAROL-2019","JOSE LUIS GOMEZ FERNANDEZ-2019","ALVARO PORRO GONZALEZ-2019","LAIA BONET RULL-2019","FRANCESC XAVIER MARCE CAROL-2019","LAIA BONET RULL-2019","JOSE LUIS GOMEZ FERNANDEZ-2019"," MONTSERRAT BALLARIN ESPUÑA-2019","LAIA BONET RULL-2019","FRANCESC XAVIER MARCE CAROL-2019","LAIA BONET RULL-2019","ALVARO PORRO GONZALEZ-2019","MIQUEL RODRIGUEZ PLANAS-2019","FRANCESC XAVIER MARCE CAROL-2019","MICHAEL SERAFIN DONALDSON CARBON-2019","MICHAEL SERAFIN DONALDSON CARBON-2019","FRANCESC XAVIER MARCE CAROL-2019","MIQUEL RODRIGUEZ PLANAS-2019","ALVARO PORRO GONZALEZ-2019","MARC SERRA SOLE-2019","LAIA BONET RULL-2019","LAIA BONET RULL-2019","JOAN SUBIRATS HUMET-2019","LAIA BONET RULL-2019","JORDI RABASSA MASSONS-2019","LAIA BONET RULL-2019","FRANCESC XAVIER MARCE CAROL-2019","MIQUEL RODRIGUEZ PLANAS-2019","LAIA BONET RULL-2019"],"values":[17494.61,14592.23,3575,14961.85,8455.47,1289.12,87.4,6528.33,1099.02,215.5,13226.43,6579.51,5194.77,1095.45,408.47,981.06,3967.41,864.53,3552.03,212.17,1483.16,1062.96,327.75,1072.38,6333.82,954.6,1428.32,13942.34,110,387.15,11206.13,13853.2,2490.7,4303.37,7575.47,1289.12,2313.6,87.4,5122.94,293.4,215.5,1212.63,2157.15,1658.95,3122.97,1338.92,1047.39,1095.45,408.47,709.8,1084.3,362.56,3514.81,864.53,696.84,212.17,35.87,209,327.75,618.5,10674.88,2042.2,1072.38,6333.82,954.6,1428.32,853.96,13942.34,110,880,2071.8,739.03,1447.29,3974.88,8999.53,95.82,4422.36,452.6,812.99,358,387.15,972.1,1145.3,948.71,361.75,372.14,413.26,352.64,1367.4,14.5,5122.94,252.65,188.6,215.5,1212.63,603.4,449.66,221.6,356.15,504.35,990.77,430.95,1633.02,4209.95,333.2,501.68,1095.45,346.2,40.75,408.47,401.55,503.22,26.67,282.71,714.19,904.05,409.27,362.56,744.45,416.85,540.65,325.07,4994.24,1642.31,482.16,864.53,491.74,550,348.15,621.7,205.1,212.17,35.87,260.35,209,436.1,2120,592.55,327.2,327.75,866.64,618.5,743.35,650.27,141.05,259.27,230.15,1079.6,672.1,2042.2,836.45,426.92,635.48,387.45,1043.04,865.88,397.77,1910.49,376.64,78.25,1016.09,9280.91,263.05,416.49,362.08,479.6,240.44,187.7,390.26,1207.2,1428.32,611.9,4070.19,3447.17,681.82,572.37,587.27,72.9,80,1509.7,110,1650,1125.5,271.05,520,330.18,353.14,252.72,231.59,150,235.93,308.25,268.3,505.66,286.67,475.04,1349.77,739.03,246.99,730,774.92,600,182.7,5240.94,279.65,1146.53,252.2,576.67,339.94,269,604.05,3442.21,5468.5,95.82,291.4,710,223.7,160.02,558.3,1482.21,287.56,165.04,580.05,3354.28,484.98,812.99,370.2,535.88,358,2633.59,387.15,413.55,346.37,509.78,820],"domain":{"column":0},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"treemap"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"ids":["FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","FREDERIC XIMENO ROCA","JANET SANZ CID","MIQUEL RODRIGUEZ PLANAS","DAVID ESCUDE RODRIGUEZ","JOAN RAMON RIERA ALEMANY","GEMMA TARAFA ORPINELL","ALBERT BATLLE BASTARDAS","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","LUCIA MARTIN GONZALEZ","AGUSTÍ COLOM CABAU","JULIA TRIAS JURADO","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","ELOI BADIA CASAS","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","JORDI RABASSA MASSONS","FRANCESC XAVIER MARCE CAROL-2021","JAIME COLLBONI CUADRADO-2021","RAQUEL GIL EIROA-2021","LAIA BONET RULL-2020","Laura PÉREZ CASTAÑO-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","FRANCESC XAVIER MARCE CAROL-2020"," JOSEP M MONTANER MARTORELL-2019","JOAN SUBIRATS HUMET-2020"," MONTSERRAT BALLARIN ESPUÑA-2020","FREDERIC XIMENO ROCA-2019","JANET SANZ CID-2022","MIQUEL RODRIGUEZ PLANAS-2021","LAIA BONET RULL-2021","DAVID ESCUDE RODRIGUEZ-2021","JANET SANZ CID-2020","JOAN SUBIRATS HUMET-2021","JOAN RAMON RIERA ALEMANY-2021","GEMMA TARAFA ORPINELL-2019"," MONTSERRAT BALLARIN ESPUÑA-2021","RAQUEL GIL EIROA-2020","ALBERT BATLLE BASTARDAS-2020","MICHAEL SERAFIN DONALDSON CARBON-2021","FRANCESCA BRIA-2019","MARC SERRA SOLE-2020"," JORDI MARTI GRAU-2019","ALVARO PORRO GONZALEZ-2020","LUCIA MARTIN GONZALEZ-2020","AGUSTÍ COLOM CABAU-2019","ALBERT BATLLE BASTARDAS-2021","JANET SANZ CID-2021","MARC SERRA SOLE-2021","JULIA TRIAS JURADO-2021","PABLO ANGEL SOLANILLA FRANCO-2021","JORDI MARTI GRAU-2021","ELOI BADIA CASAS-2021","LUCIA MARTIN GONZALEZ-2021","JOSE LUIS GOMEZ FERNANDEZ-2019"," EMP MPAL INICIATIVAS EMPR DE MALAGA-2021","Laura PÉREZ CASTAÑO-2020","DAVID ESCUDE RODRIGUEZ-2020","JAIME COLLBONI CUADRADO-2020","ALVARO PORRO GONZALEZ-2019","FRANCESC XAVIER MARCE CAROL-2019","LAIA BONET RULL-2019"," MONTSERRAT BALLARIN ESPUÑA-2019","MIQUEL RODRIGUEZ PLANAS-2019","MICHAEL SERAFIN DONALDSON CARBON-2019","MARC SERRA SOLE-2019","JOAN SUBIRATS HUMET-2019","JORDI RABASSA MASSONS-2019","21-2021","23-2021","24-2021","32-2020","44-2021","47-2019","56-2021","63-2020","70-2019","106-2020","110-2020","231-2020","236-2019","243-2022","245-2021","255-2021","257-2021","283-2021","294-2021","312-2020","324-2021","358-2020","443-2021","497-2021","499-2021","520-2021","531-2020","549-2020","552-2019","557-2021","570-2019","604-2020","605-2020","621-2021","685-2021","693-2021","709-2020","732-2021","736-2021","839-2021","878-2021","892-2021","920-2021","940-2021","944-2019","979-2020","980-2021","988-2020","1025-2021","1044-2020","1081-2019","1114-2020","1120-2021","1123-2020","1171-2021","1201-2020","1264-2021","1341-2021","1367-2019","1388-2021","1389-2021","1413-2021","1414-2021","1433-2019","1486-2021","1495-2021","1519-2021","1566-2021","1600-2021","1601-2021","1682-2021","1690-2021","1698-2021","1700-2021","1776-2021","1777-2021","1782-2021","1810-2021","1823-2021","1825-2021","1831-2021","1832-2021","1871-2021","1875-2021","1885-2021","1903-2021","1939-2021","1958-2021","1988-2021","1989-2021","2012-2021","2033-2021","2114-2021","2129-2021","2159-2021","2217-2021","2250-2019","2251-2021","2263-2019","2271-2021","2284-2021","2313-2021","2315-2021","2330-2021","2396-2021","2435-2021","2458-2021","2461-2019","2525-2020","2526-2021","2528-2021","2548-2021","2572-2021","2637-2021","2688-2020","2865-2020","2877-2020","2886-2020","2980-2020","3029-2020","3038-2020","3053-2019","3671-2019","3729-2019","3860-2019","4122-2019","4232-2019","4340-2019","4372-2019","4385-2019","4398-2019","4427-2019","4455-2019","4520-2019","4530-2019","4597-2019","4699-2019","4818-2019","4831-2019","4998-2019","4999-2019","5001-2019","5073-2019","5084-2019","5121-2019","5141-2019","5157-2019","5203-2019","5205-2019","5499-2019","5840-2019","5878-2019","5886-2019","6048-2019"],"labels":["FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","FREDERIC XIMENO ROCA","JANET SANZ CID","MIQUEL RODRIGUEZ PLANAS","DAVID ESCUDE RODRIGUEZ","JOAN RAMON RIERA ALEMANY","GEMMA TARAFA ORPINELL","ALBERT BATLLE BASTARDAS","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","LUCIA MARTIN GONZALEZ","AGUSTÍ COLOM CABAU","JULIA TRIAS JURADO","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","ELOI BADIA CASAS","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","JORDI RABASSA MASSONS","2021","2021","2021","2020","2021","2019","2020","2019","2020","2020","2019","2022","2021","2021","2021","2020","2021","2021","2019","2021","2020","2020","2021","2019","2020","2019","2020","2020","2019","2021","2021","2021","2021","2021","2021","2021","2021","2019","2021","2020","2020","2020","2019","2019","2019","2019","2019","2019","2019","2019","2019","MADRID","MADRID","MADRID","MADRID","MADRID","PARÍS","MADRID","MADRID","ESTRASBURG","HAVANA","MADRID","PORTO","MADRID","PARIS","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","ABU DHABI","CANCÚN","MADRID","SEVILLA","MADRID","NAPOLS","MADRID","MADRID","MADRID","RENNES","MADRID","LONDRES","MADRID","MADRID","MADRID","MADRID","MADRID","MADRID","COLÒNIA","MADRID","ERBIL","PARIS","ERMUA","MILA","LISBOA","OPORTO","MADRID","MADRID","MADRID","MADRID","CARDEDEU","MADRID","MADRID","MADRID","NOVA YORK","VALÈNCIA","NANTES","LISBOA","MADRID","MADRID","MUNIC","BUDAPEST","BARCELONA-MADRID-MEXICO CITY-LEON GUANAJUATO","MADRID","MADRID","MÀLAGA","MADRID","CANARIES","GRAN CANÀRIA","SEVILLA","SEVILLA","SEVILLA","AMSTERDAM","SEVILLA","MADRID","MILÀ","PALMA DE MALLORCA","MADRID","MADRID","GLASGOW","MADRID","MADRID","SANT SEBASTIÀ","VALÈNCIA","VALÈNCIA","VALÈNCIA","MADRID","LEIPZIG","GLASGOW","SARAJEVO","DUBAI","DUBAI","SEVILLA","MADRID","COPANHAGE","LYON","MADRID","EINDHOVEN","MÀLAGA","MADRID","PARÍS","MADRID","MONTPELLIER","PARÍS","PARÍS","MADRID","ZAGREB","MADRID","BRUSSEL.LES","MADRID","MADRID","AMSTERDAM","MADRID","MADRID","MADRID","MADRID","MADRID","LESBOS","PARIS","MADRID","SHEFFIELD","TOKIO","VALÈNCIA","PRAGA","HELSINKI","MADRID","MONTPELLIER","MADRID","BILBAO","NOVA YORK","TOKIO","PERPIGNAN","GINEBRA","MADRID","MADRID","MADRID","BRUSSEL.LES","BUENOS AIRES","VALÈNCIA","LONDRES","MADRID","DURBAN","BRUSSEL.LES","AMSTERDAM","BRUSSEL·LES","PRAGA","MILÀ","DURBAN","MADRID","MADRID","KIOTO","GINEBRA","PARÍS"],"parents":["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT","FRANCESC XAVIER MARCE CAROL"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","FREDERIC XIMENO ROCA","JANET SANZ CID","MIQUEL RODRIGUEZ PLANAS","LAIA BONET RULL","DAVID ESCUDE RODRIGUEZ","JANET SANZ CID","JOAN SUBIRATS HUMET","JOAN RAMON RIERA ALEMANY","GEMMA TARAFA ORPINELL"," MONTSERRAT BALLARIN ESPUÑA","RAQUEL GIL EIROA","ALBERT BATLLE BASTARDAS","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","LUCIA MARTIN GONZALEZ","AGUSTÍ COLOM CABAU","ALBERT BATLLE BASTARDAS","JANET SANZ CID","MARC SERRA SOLE","JULIA TRIAS JURADO","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","ELOI BADIA CASAS","LUCIA MARTIN GONZALEZ","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","Laura PÉREZ CASTAÑO","DAVID ESCUDE RODRIGUEZ","JAIME COLLBONI CUADRADO","ALVARO PORRO GONZALEZ","FRANCESC XAVIER MARCE CAROL","LAIA BONET RULL"," MONTSERRAT BALLARIN ESPUÑA","MIQUEL RODRIGUEZ PLANAS","MICHAEL SERAFIN DONALDSON CARBON","MARC SERRA SOLE","JOAN SUBIRATS HUMET","JORDI RABASSA MASSONS","FRANCESC XAVIER MARCE CAROL-2021","JAIME COLLBONI CUADRADO-2021","RAQUEL GIL EIROA-2021","LAIA BONET RULL-2020","Laura PÉREZ CASTAÑO-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","JAIME COLLBONI CUADRADO-2021","FRANCESC XAVIER MARCE CAROL-2020"," JOSEP M MONTANER MARTORELL-2019","JOAN SUBIRATS HUMET-2020"," MONTSERRAT BALLARIN ESPUÑA-2020","LAIA BONET RULL-2020","FREDERIC XIMENO ROCA-2019","JANET SANZ CID-2022","JAIME COLLBONI CUADRADO-2021","MIQUEL RODRIGUEZ PLANAS-2021","LAIA BONET RULL-2021","DAVID ESCUDE RODRIGUEZ-2021","FRANCESC XAVIER MARCE CAROL-2021","JANET SANZ CID-2020","JAIME COLLBONI CUADRADO-2021","LAIA BONET RULL-2020","FRANCESC XAVIER MARCE CAROL-2021","JOAN SUBIRATS HUMET-2021","DAVID ESCUDE RODRIGUEZ-2021","JOAN RAMON RIERA ALEMANY-2021","FRANCESC XAVIER MARCE CAROL-2020"," MONTSERRAT BALLARIN ESPUÑA-2020","GEMMA TARAFA ORPINELL-2019"," MONTSERRAT BALLARIN ESPUÑA-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","RAQUEL GIL EIROA-2020","RAQUEL GIL EIROA-2020","JOAN SUBIRATS HUMET-2021","FRANCESC XAVIER MARCE CAROL-2021","DAVID ESCUDE RODRIGUEZ-2021","ALBERT BATLLE BASTARDAS-2020","JAIME COLLBONI CUADRADO-2021","JAIME COLLBONI CUADRADO-2021","DAVID ESCUDE RODRIGUEZ-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","Laura PÉREZ CASTAÑO-2021","JAIME COLLBONI CUADRADO-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","FRANCESCA BRIA-2019","MARC SERRA SOLE-2020","FRANCESC XAVIER MARCE CAROL-2021","JANET SANZ CID-2020","JAIME COLLBONI CUADRADO-2021","MARC SERRA SOLE-2020"," JORDI MARTI GRAU-2019","ALVARO PORRO GONZALEZ-2020","FRANCESC XAVIER MARCE CAROL-2021","LUCIA MARTIN GONZALEZ-2020","JAIME COLLBONI CUADRADO-2021","LAIA BONET RULL-2020","FRANCESC XAVIER MARCE CAROL-2021","FRANCESC XAVIER MARCE CAROL-2021","AGUSTÍ COLOM CABAU-2019","JAIME COLLBONI CUADRADO-2021","ALBERT BATLLE BASTARDAS-2021","JANET SANZ CID-2021","Laura PÉREZ CASTAÑO-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","MICHAEL SERAFIN DONALDSON CARBON-2021","LAIA BONET RULL-2021","MIQUEL RODRIGUEZ PLANAS-2021","FRANCESC XAVIER MARCE CAROL-2021","MARC SERRA SOLE-2021","JULIA TRIAS JURADO-2021","Laura PÉREZ CASTAÑO-2021","FRANCESC XAVIER MARCE CAROL-2021","MIQUEL RODRIGUEZ PLANAS-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","DAVID ESCUDE RODRIGUEZ-2021","PABLO ANGEL SOLANILLA FRANCO-2021","JORDI MARTI GRAU-2021","JANET SANZ CID-2021","JAIME COLLBONI CUADRADO-2021","JANET SANZ CID-2021","FRANCESC XAVIER MARCE CAROL-2021","RAQUEL GIL EIROA-2021","FRANCESC XAVIER MARCE CAROL-2021","JAIME COLLBONI CUADRADO-2021","MIQUEL RODRIGUEZ PLANAS-2021","JORDI MARTI GRAU-2021","JORDI MARTI GRAU-2021","LAIA BONET RULL-2021","ELOI BADIA CASAS-2021","Laura PÉREZ CASTAÑO-2021","PABLO ANGEL SOLANILLA FRANCO-2021","JAIME COLLBONI CUADRADO-2021","FRANCESC XAVIER MARCE CAROL-2021","JANET SANZ CID-2021","DAVID ESCUDE RODRIGUEZ-2021"," JOSEP M MONTANER MARTORELL-2019","LUCIA MARTIN GONZALEZ-2021","JOSE LUIS GOMEZ FERNANDEZ-2019"," EMP MPAL INICIATIVAS EMPR DE MALAGA-2021","JAIME COLLBONI CUADRADO-2021","RAQUEL GIL EIROA-2021","FRANCESC XAVIER MARCE CAROL-2021","Laura PÉREZ CASTAÑO-2021","DAVID ESCUDE RODRIGUEZ-2021","PABLO ANGEL SOLANILLA FRANCO-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","MIQUEL ÀNGEL ESSOMBA GELABERT-2019","Laura PÉREZ CASTAÑO-2020","JULIA TRIAS JURADO-2021"," MONTSERRAT BALLARIN ESPUÑA-2021","LUCIA MARTIN GONZALEZ-2021","LUCIA MARTIN GONZALEZ-2021","MICHAEL SERAFIN DONALDSON CARBON-2021","DAVID ESCUDE RODRIGUEZ-2020","DAVID ESCUDE RODRIGUEZ-2020","JAIME COLLBONI CUADRADO-2020","DAVID ESCUDE RODRIGUEZ-2020","Laura PÉREZ CASTAÑO-2020","RAQUEL GIL EIROA-2020","FRANCESC XAVIER MARCE CAROL-2020","ALVARO PORRO GONZALEZ-2019","JOSE LUIS GOMEZ FERNANDEZ-2019","ALVARO PORRO GONZALEZ-2019","JOSE LUIS GOMEZ FERNANDEZ-2019","FRANCESC XAVIER MARCE CAROL-2019","JOSE LUIS GOMEZ FERNANDEZ-2019","ALVARO PORRO GONZALEZ-2019","LAIA BONET RULL-2019","FRANCESC XAVIER MARCE CAROL-2019","LAIA BONET RULL-2019","JOSE LUIS GOMEZ FERNANDEZ-2019"," MONTSERRAT BALLARIN ESPUÑA-2019","LAIA BONET RULL-2019","FRANCESC XAVIER MARCE CAROL-2019","LAIA BONET RULL-2019","ALVARO PORRO GONZALEZ-2019","MIQUEL RODRIGUEZ PLANAS-2019","FRANCESC XAVIER MARCE CAROL-2019","MICHAEL SERAFIN DONALDSON CARBON-2019","MICHAEL SERAFIN DONALDSON CARBON-2019","FRANCESC XAVIER MARCE CAROL-2019","MIQUEL RODRIGUEZ PLANAS-2019","ALVARO PORRO GONZALEZ-2019","MARC SERRA SOLE-2019","LAIA BONET RULL-2019","LAIA BONET RULL-2019","JOAN SUBIRATS HUMET-2019","LAIA BONET RULL-2019","JORDI RABASSA MASSONS-2019","LAIA BONET RULL-2019","FRANCESC XAVIER MARCE CAROL-2019","MIQUEL RODRIGUEZ PLANAS-2019","LAIA BONET RULL-2019"],"values":[17494.61,14592.23,3575,14961.85,8455.47,1289.12,87.4,6528.33,1099.02,215.5,13226.43,6579.51,5194.77,1095.45,408.47,981.06,3967.41,864.53,3552.03,212.17,1483.16,1062.96,327.75,1072.38,6333.82,954.6,1428.32,13942.34,110,387.15,11206.13,13853.2,2490.7,4303.37,7575.47,1289.12,2313.6,87.4,5122.94,293.4,215.5,1212.63,2157.15,1658.95,3122.97,1338.92,1047.39,1095.45,408.47,709.8,1084.3,362.56,3514.81,864.53,696.84,212.17,35.87,209,327.75,618.5,10674.88,2042.2,1072.38,6333.82,954.6,1428.32,853.96,13942.34,110,880,2071.8,739.03,1447.29,3974.88,8999.53,95.82,4422.36,452.6,812.99,358,387.15,972.1,1145.3,948.71,361.75,372.14,413.26,352.64,1367.4,14.5,5122.94,252.65,188.6,215.5,1212.63,603.4,449.66,221.6,356.15,504.35,990.77,430.95,1633.02,4209.95,333.2,501.68,1095.45,346.2,40.75,408.47,401.55,503.22,26.67,282.71,714.19,904.05,409.27,362.56,744.45,416.85,540.65,325.07,4994.24,1642.31,482.16,864.53,491.74,550,348.15,621.7,205.1,212.17,35.87,260.35,209,436.1,2120,592.55,327.2,327.75,866.64,618.5,743.35,650.27,141.05,259.27,230.15,1079.6,672.1,2042.2,836.45,426.92,635.48,387.45,1043.04,865.88,397.77,1910.49,376.64,78.25,1016.09,9280.91,263.05,416.49,362.08,479.6,240.44,187.7,390.26,1207.2,1428.32,611.9,4070.19,3447.17,681.82,572.37,587.27,72.9,80,1509.7,110,1650,1125.5,271.05,520,330.18,353.14,252.72,231.59,150,235.93,308.25,268.3,505.66,286.67,475.04,1349.77,739.03,246.99,730,774.92,600,182.7,5240.94,279.65,1146.53,252.2,576.67,339.94,269,604.05,3442.21,5468.5,95.82,291.4,710,223.7,160.02,558.3,1482.21,287.56,165.04,580.05,3354.28,484.98,812.99,370.2,535.88,358,2633.59,387.15,413.55,346.37,509.78,820],"domain":{"column":0},"type":"treemap","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="if-everythig-fails" class="section level2">
+<h2>If everythig fails…</h2>
+<p>Sometimes it may be more convenient to just provide acces to the granular data and let the user do the queries. In this case, luckily this is quite eays thanks to the features of <a href="https://cran.r-project.org/web/packages/reactable/index.html">reactable</a></p>
+<div id="htmlwidget-4" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Numero_de_registre":[21,23,24,32,44,47,56,63,70,106,110,231,236,243,245,255,257,283,294,312,324,358,443,497,499,520,531,549,552,557,570,604,605,621,685,693,709,732,736,839,878,892,920,940,944,979,980,988,1025,1044,1081,1114,1120,1123,1171,1201,1264,1341,1367,1388,1389,1413,1414,1433,1486,1495,1519,1566,1600,1601,1682,1690,1698,1700,1776,1777,1782,1810,1823,1825,1831,1832,1871,1875,1885,1903,1939,1958,1988,1989,2012,2033,2114,2129,2159,2217,2250,2251,2263,2271,2284,2313,2315,2330,2396,2435,2458,2461,2525,2526,2528,2548,2572,2637,2688,2865,2877,2886,2980,3029,3038,3053,3671,3729,3860,4122,4232,4340,4372,4385,4398,4427,4455,4520,4530,4597,4699,4818,4831,4998,4999,5001,5073,5084,5121,5141,5157,5203,5205,5499,5840,5878,5886,6048],"Exercici":[2021,2021,2021,2020,2021,2019,2021,2020,2019,2020,2020,2020,2019,2022,2021,2021,2021,2021,2021,2020,2021,2020,2021,2021,2021,2021,2020,2020,2019,2021,2019,2020,2020,2021,2021,2021,2020,2021,2021,2021,2021,2021,2021,2021,2019,2020,2021,2020,2021,2020,2019,2020,2021,2020,2021,2020,2021,2021,2019,2021,2021,2021,2021,2019,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2021,2019,2021,2019,2021,2021,2021,2021,2021,2021,2021,2021,2019,2020,2021,2021,2021,2021,2021,2020,2020,2020,2020,2020,2020,2020,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019,2019],"Titular":["FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","LAIA BONET RULL","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT","JAIME COLLBONI CUADRADO","FRANCESC XAVIER MARCE CAROL"," JOSEP M MONTANER MARTORELL","JOAN SUBIRATS HUMET"," MONTSERRAT BALLARIN ESPUÑA","LAIA BONET RULL","FREDERIC XIMENO ROCA","JANET SANZ CID","JAIME COLLBONI CUADRADO","MIQUEL RODRIGUEZ PLANAS","LAIA BONET RULL","DAVID ESCUDE RODRIGUEZ","FRANCESC XAVIER MARCE CAROL","JANET SANZ CID","JAIME COLLBONI CUADRADO","LAIA BONET RULL","FRANCESC XAVIER MARCE CAROL","JOAN SUBIRATS HUMET","DAVID ESCUDE RODRIGUEZ","JOAN RAMON RIERA ALEMANY","FRANCESC XAVIER MARCE CAROL"," MONTSERRAT BALLARIN ESPUÑA","GEMMA TARAFA ORPINELL"," MONTSERRAT BALLARIN ESPUÑA","MIQUEL ÀNGEL ESSOMBA GELABERT","RAQUEL GIL EIROA","RAQUEL GIL EIROA","JOAN SUBIRATS HUMET","FRANCESC XAVIER MARCE CAROL","DAVID ESCUDE RODRIGUEZ","ALBERT BATLLE BASTARDAS","JAIME COLLBONI CUADRADO","JAIME COLLBONI CUADRADO","DAVID ESCUDE RODRIGUEZ","MICHAEL SERAFIN DONALDSON CARBON","Laura PÉREZ CASTAÑO","JAIME COLLBONI CUADRADO","MICHAEL SERAFIN DONALDSON CARBON","FRANCESCA BRIA","MARC SERRA SOLE","FRANCESC XAVIER MARCE CAROL","JANET SANZ CID","JAIME COLLBONI CUADRADO","MARC SERRA SOLE"," JORDI MARTI GRAU","ALVARO PORRO GONZALEZ","FRANCESC XAVIER MARCE CAROL","LUCIA MARTIN GONZALEZ","JAIME COLLBONI CUADRADO","LAIA BONET RULL","FRANCESC XAVIER MARCE CAROL","FRANCESC XAVIER MARCE CAROL","AGUSTÍ COLOM CABAU","JAIME COLLBONI CUADRADO","ALBERT BATLLE BASTARDAS","JANET SANZ CID","Laura PÉREZ CASTAÑO","MIQUEL ÀNGEL ESSOMBA GELABERT","MICHAEL SERAFIN DONALDSON CARBON","LAIA BONET RULL","MIQUEL RODRIGUEZ PLANAS","FRANCESC XAVIER MARCE CAROL","MARC SERRA SOLE","JULIA TRIAS JURADO","Laura PÉREZ CASTAÑO","FRANCESC XAVIER MARCE CAROL","MIQUEL RODRIGUEZ PLANAS","MICHAEL SERAFIN DONALDSON CARBON","MICHAEL SERAFIN DONALDSON CARBON","DAVID ESCUDE RODRIGUEZ","PABLO ANGEL SOLANILLA FRANCO","JORDI MARTI GRAU","JANET SANZ CID","JAIME COLLBONI CUADRADO","JANET SANZ CID","FRANCESC XAVIER MARCE CAROL","RAQUEL GIL EIROA","FRANCESC XAVIER MARCE CAROL","JAIME COLLBONI CUADRADO","MIQUEL RODRIGUEZ PLANAS","JORDI MARTI GRAU","JORDI MARTI GRAU","LAIA BONET RULL","ELOI BADIA CASAS","Laura PÉREZ CASTAÑO","PABLO ANGEL SOLANILLA FRANCO","JAIME COLLBONI CUADRADO","FRANCESC XAVIER MARCE CAROL","JANET SANZ CID","DAVID ESCUDE RODRIGUEZ"," JOSEP M MONTANER MARTORELL","LUCIA MARTIN GONZALEZ","JOSE LUIS GOMEZ FERNANDEZ"," EMP MPAL INICIATIVAS EMPR DE MALAGA","JAIME COLLBONI CUADRADO","RAQUEL GIL EIROA","FRANCESC XAVIER MARCE CAROL","Laura PÉREZ CASTAÑO","DAVID ESCUDE RODRIGUEZ","PABLO ANGEL SOLANILLA FRANCO","MICHAEL SERAFIN DONALDSON CARBON","MIQUEL ÀNGEL ESSOMBA GELABERT","Laura PÉREZ CASTAÑO","JULIA TRIAS JURADO"," MONTSERRAT BALLARIN ESPUÑA","LUCIA MARTIN GONZALEZ","LUCIA MARTIN GONZALEZ","MICHAEL SERAFIN DONALDSON CARBON","DAVID ESCUDE RODRIGUEZ","DAVID ESCUDE RODRIGUEZ","JAIME COLLBONI CUADRADO","DAVID ESCUDE RODRIGUEZ","Laura PÉREZ CASTAÑO","RAQUEL GIL EIROA","FRANCESC XAVIER MARCE CAROL","ALVARO PORRO GONZALEZ","JOSE LUIS GOMEZ FERNANDEZ","ALVARO PORRO GONZALEZ","JOSE LUIS GOMEZ FERNANDEZ","FRANCESC XAVIER MARCE CAROL","JOSE LUIS GOMEZ FERNANDEZ","ALVARO PORRO GONZALEZ","LAIA BONET RULL","FRANCESC XAVIER MARCE CAROL","LAIA BONET RULL","JOSE LUIS GOMEZ FERNANDEZ"," MONTSERRAT BALLARIN ESPUÑA","LAIA BONET RULL","FRANCESC XAVIER MARCE CAROL","LAIA BONET RULL","ALVARO PORRO GONZALEZ","MIQUEL RODRIGUEZ PLANAS","FRANCESC XAVIER MARCE CAROL","MICHAEL SERAFIN DONALDSON CARBON","MICHAEL SERAFIN DONALDSON CARBON","FRANCESC XAVIER MARCE CAROL","MIQUEL RODRIGUEZ PLANAS","ALVARO PORRO GONZALEZ","MARC SERRA SOLE","LAIA BONET RULL","LAIA BONET RULL","JOAN SUBIRATS HUMET","LAIA BONET RULL","JORDI RABASSA MASSONS","LAIA BONET RULL","FRANCESC XAVIER MARCE CAROL","MIQUEL RODRIGUEZ PLANAS","LAIA BONET RULL"],"Càrrec":["Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Comissionat/da","Comissionat/da","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Comissionat/da","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Comissionat/da","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","","Regidor/a","Regidor/a","Comissionat/da","Comissionat/da","Comissionat/da","Comissionat/da","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Comissionat/da","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Comissionat/da","Comissionat/da","Regidor/a","","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Comissionat/da","Comissionat/da","Comissionat/da","Comissionat/da","Regidor/a","Comissionat/da","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Comissionat/da","Regidor/a","Comissionat/da","Comissionat/da","Regidor/a","Comissionat/da","Comissionat/da","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Regidor/a","Comissionat/da","Regidor/a"],"Motiu_viatge":["VISITES I TROBADES D'INDÚSTRIES CREATIVES","VIATGE PER VISITES INSTITUCIONALS","VIATGE MADRID MINISTERIO DE TRABAJO","REUNIONS A MADRID PER TEMES D'AGENDA 2030","REUNIONS DIVERSES MINISTERIO DE INCLUSIÓN","TROBADA AMB L'AMBAIXADOR 'ESPANYA AMB LA UNESCO SR. JUAN ANDRÉS PERELLÓ RODRÍGUEZ","VIATGE MADRID SR. JAUME COLLBONI PER RELACIONS INSTITUCIONALS 21/01/21","PARTICIPAR EN LA FERIA INTERNACIONAL DE TURISMO MADRID (FITUR 2020)","PRESENTACIÓ MANIFEST BARCELONA AL PARLAMENT EUROPEU","PROGRAMA ARTÍSTIC MERCÈ 2020, TROBADES INSTITUCIONALS I ACORDS COOPERACIÓ INTERNACIONAL","VISITA DE TREBALL ÒRGANS INSTITUCIONALS (AYUNTAMIENTO,MERCASA,FEMP,MINISTERIO,CONGRESO)","ASSISTÈNCIA AL 4TH CITIES FORUM DE LA COMISSIÓ EUROPEA","ENTREGA DE PREMIS 'PAJARITAS AZULES'","PARTICIPACIÓ FESTIVAL MOBILITAT SOSTENIBLE A PARÍS","VISITES INSTITUCIONALS A MADRID","REUNIONS AMB MINISTERIS SOBRE PROJECTES EUROPEUS","REUNIONS SOBRE ELS FONS EUROPEUS","VIATGE A MADRID - VISITES INSTITUCIONALS 11 I 12.03.2021","REUNIÓ AMB SECRETARIA ESTAT TURISME I TROBADES SECTOR INDÚSTRIES CREATIVES","TROBADES A MADRID AMB DIVERSOS ARQUITECTES PEL PROJECTE DE SUPERILLES","VIATGE A MADRID ACTE INSTITUCIONAL 24 I 25 DE MARÇ SR. JAUME COLLBONI","VIATGE PER ASSISTIR AL FORUM URBAN MUNDIAL","ASSISTÈNCIA AL WORLD TRAVEL & TOURISM COUNCIL GLOBAL SUMMIT","REUNIÓ MINISTERIO DE CULTURA","ASSISTÈNCIA PARTIT FUTBOL COPA DEL REI A SEVILLA","VISITA INSTITUCIONAL A MADRID. REGIDORIA IJPGIPD JOAN R. RIERA","PARTICIPACIÓ EN DEBAT SOBRE TURISTIFICACIÓ. ' NAPOLI, FIRENZE E BARCELLONA A CONFRONTO'","PONÈNCIA SEMINARIO FISCALIDAD INMOBILIARIA, SITUACIÓN ACTUAL Y PERSPECT","G. TARAFA. ACTO CONTAMINACIÓN DEL AIRE Y SALUD. MINISTERIO DE SANIDAD, CONSUMO","VIATGE DE M.BALLARIN A MADRID EL 05/05/2021 VISITA SECRETARIA DE ESTADO DE COMERCIO","ASSISTÈNCIA PER DELEGACIÓ D'ALCALDIA AL COMITÈ EXECUTIU I ASSEMBLEA GENERAL DE L'AICE","VIATGE A MADRID_BRITHISH COUNCIL","VIATGE LONDON APRENENTATGE FUNDACIÓ BERTELSMANN","REUNIÓ MINISTERIS CIÈNCIA I UNIVERSITATS, CSIC I ALTRES","PARTICIPAR EN LA FIRA DE FITUR 2021 DE MADRID","VIATGE A MADRID - REUNIONS INSTITUCIONALS","REUNIÓ AMB SECRETARI ESTAT SEGURETAT I AMB PORTAVEU COMISSIÓ D'INTERIOR CONGRÉS","VIATGE JAUME COLLBONI A MADID DEL 20 AL 23 DE MAIG PER FITUR","VIATGE A MADRID PER ASSISTIR A LES JORNADES DEL SENAT DEL 25 DE MAIG","VIATGE A COLÒNIA - ASSISTÈNCIA FINAL FOUR EUROLLIGA BÀSQUET","VIATGE A MADRID REUNIONS SECRETÀRIA INNOVACIÓ","VIATGE IRAK I SIRIA AMB DELEGACIÓ DEL PARLAMENT PER VISITAR CAMPS DE REFUGIATS","VIATGE OFICIAL PARIS SR. COLLBONI 14 I 15 JUNY PER ASSISTIR A UN ACTE OFICIAL","JORNADA DE TREBALL I ASSEMBLEA RED INNPULSO, ELS DIES 22 I 23 DE JUNY A ERMUA-BIZCAIA","MILÀ CGCC'S I DIGITAL WEEK FRANCESCA BRIA","INTERCANVIAR EXPERIÈNCIES AMB LA REGIDORIA DE PARTICIPACIÓ AJUNTAMENT DE LISBOA","PARTICIPAR EN EL UNWTO MAYORS FORUM FOR SUSTAINABLE URBAN TOURISM","TROBADES A MADRID AMB DIVERSOS ARQUITECTES PEL PROJECTE SUPERILLES","VIATGE JAUME COLLBONI A MADRID 02-06/07 PER REUNIONS INSTITUCIONALS","ACOMPANYA ALCALDESSA A REUNIÓ AMB MINISTRE D'INCLUSIÓ","VIATGE 14/03/19 A MADRID, REUNIÓ AMB SUBSECRETARIA HISENDA (MINISTERIO HACIENDA)","1A TROBADA CÀRRECS ELECTES XARXA MUNICPIS ECONOMIA SOCIAL I SOLIDÀRIA","PARTICIPAR EN LES JORNADES DE LA CEOE DE CULTURA, TURISME I TERRITORI","VIATGE A MADRID ACOMPANYANT A L'ALCALDESSA A UNA REUNIÓ","VIATGE A MADRID 12/07 PER INVESTIDURA MINISTRES","ASSISTÈNCIA A LA COMISSIÓ D'ESTATUS DE LA DONA","VISITES I TROBADES INSTITUCIONALS EN L'ÀMBIT DE LES INDÚSTRIES CREATIVES","PARTICIPAR EN SYMPOSIUM DE TURISME DE NANTES MÉTROPOLE","FIRST UNWTO MAYORS FORUM FOR SUSTAINABLE URBAN TOURISM - 'CITIES FOR ALL'","VIATGE JAUME COLLBONI A MADRID EL 2 I 3 DE SETEMBRE PER REUNIONS INSTITUCIONALS","VIATGE A MADRID ALBERT BATLLE 2 DE SETEMBRE PER REUNIONS INSTITUCIONALS","PARTICIPAR MARTERCLASS PLA ELECTRIFICACIÓ BARCELONA JUNTAMENT AMB EMPRESA WALLBOX","ASSISTIR AL BUDAPEST FORUM","CONGRÉS RED MEXICANA CIUDADES EDUCADORAS","TROBADA GRUP DE TREBALL CENTRES DE INNOVACIÓ URBANA","ASSISTÈNCIA A LA SIGNATURA DEL CONTRACTE CLIMÀTIC CITIES","PARTICIPACIÓ GREENCITIES FORUM 2021","TROBADA AMB SECRETARI D'ESTAT DE TURISME I REGIDORA DELEGADA DE TURISME AJUNTAMENT MADRI","CERCAR ESPAIS D'ALIANCES I DE SEGUIMENT DE L'INICI DEL PROJECTE MÓN LOCAL REFUGI","CERCAR ESPAIS D'ALIANCES I DE SEGUIMENT DE L'INICI DEL PROJECTE MÓN LOCAL REFUGI","VIATGE A SEVILLA. ASSISTÈNCIA FÒRUM MASCULINITATS","PARTICIPACIÓ EN EL I FÒRUM URBÀ I III FÒRUM GLOBAL DE GOVERNS LOCALS","PARTICIPACIÓ SIDE EVENT 'FORO URBANO DE ESPAÑA' EN SEVILLA","ASSISTÈNCIA A CONFERÈNCIA CC4DR","ASSISTÈNCIA AL 'FORO URBANO DE ESPAÑA'","VIATGE A MADRID 26-27.07.21, X REUNIR-SE AMB LA DIR. DEL CSD, MINISTERI DE CULTURA I ESP","ASSISTÈNCIA AL WORLD ROUTES MILÀ 2021 I RECUPERACIÓ DE VOLS INTERCONTINENTALS","REUNIONS CULTURA","REUNIÓ PRESIDENTA D'ADIF A MADRID","VIATGE A MADRID SR. JAUME COLLBONI PER ASSISTIR A UN ACTE INSTITUCIONAL 11/10","PARTICIPACIÓ COP 26 A GLASGOW I REUNIONS I VISITES AJUNTAMENT LONDRES","PARTICIPACIÓ EN EL FÒRUM 'EL VALOR DE LA CULTURA'","VIATGE A MADRID SEPE/FORO DE EMPLEO DELOITTE","VIATGE PER REALITZAR VISITES I TROBADES INSTITUCIONALS AMB AJUNTAMENT DE SANT SEBASTIÀ","VIATGE SR. COLLBONI A VALÈNCIA 18/10 PER REUNIONS INSTITUCIONALS","VIATGE A VALÈNCIA - VISITES AMB BARCELONA ACTIVA I 1R TINENT","REUNIONS CULTURA","REUNIONS CULTURA","ASSISTÈNCIA ASSEMBLEA GENERAL D'EUROCITIES","PARTICIPACIÓ EN EL COP26","JORNADES SOBRE PROGRAMES DE PREVENCIÓ I LLUITA CONTRA LA VIOLÈNCIA DE GÈNERE","VIATGE INSTITUCIONAL PER PARTICIPAR EN EXPO DUBAI 2020 (2021)","VIATGE SR. COLLBONI A DUBAI 05/11 AL 10/11 PER PROMOCIÓ DE CIUTAT","PARTICIPACIÓ EN EL TOURISM INNOVATION SUMMIT DE SEVILLA","PARTICIPACIÓ CONFERENCIA FORO DE LA UE AIRE PURO I REUNIONS AMB MINISTERIS","ASSISTÈNCIA AL SUMMIT SMART CITIES & SPORT","2ND INTERNATIONAL SOCIAL HOUSING FESTIVAL","ASSISTÈNCIA FORO INNOVACIÓ URBANA A MADRID, DIA 13/11","PARTICIPAR EN ITS EUROPEAN CONGRESS/SESSIO TREBALL AMB EIT UM INTERIM MANAGEMENT TEAM","PARTICIPACIÓ GREENCITIES FORUM 2021 -DESPESA PARTICPACIÓ + HOTEL","VIATGE SR. COLLBONI A MADRID PER REUNIONS INSTITUCIONALS DEL 18/11 AL 20/11","VIATGE A PARÍS CITÉ DES MÉTIERS","PARTICIPACIÓ EN RDP DE PRESENTACIÓ DE LA CAMPANYA DE NADAL","ASSISTÈNCIA ASSEMBLEA GENERAL MEDCITIES","ENTREVISTA AMB EL SR. CHRISTIAN PRUDHOMME, DIRECTOR DE ASO (AMAURY SPORTS ORGANIZATION)","REPRESENTACIÓ DE L'AJUNTAMENT EN UNA REUNIÓ","VIATGE A MADRID - VISITA CENTRE INNOVACIÓ URBBANA","PARTICIPACIÓ CONFERÈNCIA INCLUSIVE EDUCATION FOR ALL: FROM IDEAS TO ACTION","ASSISTÈNCIA A CURS AGENDA 2030 A MADRID","ASSISTÈNCIA A LLIURAMENT DE PREMIS 'INNOVATION POLITICS AWARDS', ON BARCELONA ÉS FINALIS","ENTREGA PREMIOS NACIONALES DE COMERCIO INTERIOR 2021","VIATGE A MADRID PER REUNIÓ AMB LA DIRECTORA DE TRIBUTOS Y SUBDIRECTOR DE LA DIR. GRAL DE","PARTICIPACIÓ A DELFT (AMSTERDAM) COM A PONENT A LES JORNADES PROJECT TOGETHER","CONSELL RECTOR RED INNPULSO","VIATGE DE DAVID ESCUDÉ DEL 28 AL 29 DE JULIOL 2020 A MADRID - AJ. MADRID REGID. ESPORTS","ASSISTÈNCIA A LA GALA DELA RFEP (REAL FEDERACIÓN ESPAÑOLA DE PATINAJE)","VIATJE A MADRID PER VISITES INSTITUCIONALS","VIATGE D. ESCUDÉ MADRID 29-09-2020, REUNIÓ SEC. ESTAT I AJ. MADRID - POLÍTICA ESPORTIVA","VISITA CAMP DE REFUGIATS","VIATGE COMISSIONADA A 'CITÈ DE METIERS' CANDIDATURA PRESIDENTA DELEGADA DE COOPERACIÓ IN","REUNIÓ AMB SECRETARI D'ESTAT DE TURISME I TROBADES AMB SECTOR INDUSTRIES CREATIVES","26-28 JUNY-PARTICIPACIÓ 7TH EMES INTERNATIONAL RESEARCH CONFERENCE ON SOCIAL ENTERPRISE","MANTENIR REUNIONS I SESSIONS DE TREBALL INSTITUCIONALS SEGONS PROGRAMA ADJUNT","ASSISTÈNCIA 'ACTO DE PRESENTACIÓN DEL CENTRO MUNDIAL DE VALÈNCIA PARA LA ALIMENTACIÓN UR","ASSISTÈNCIA 4TH EIT URBAN MOBILITY GENERAL ASSEMBLY IMT MEETING","PARTICIPAR EN EL WTCF HELSINKI FRAGRANT HILLS TOURISM SUMMIT 2019","TROBADA AMB DIRECCIÓ GENERAL DE TRÀNSIT PER ACOLLIR REUNIÓ MINISTRES TRANSPORT","PARTICIPACIÓ 5ÈME ÉDITION DE LA RENCONTRE ANNUELLE DU PACTE DE POLITIQUE ALIMENTAIRE","ASSISTÈNCIA AL PENARI DE LA FEMP","PRESENTACIÓ CANDIDATURA DE BCN PER ACOLLIR L'EUROPRIDE 2022","ASSISTÈNCIA A LA CIMERA OBJECTIUS DESENVOLUPAMENT SOSTENIBLE","PARTICIPAR A L'SMART CITY KIOTO I WORLD ECONOMIC FORUM DE YOKOHAMA","VISITA A UN CENTRE D'OFICIS I POSSIBILITAT DE TRASLLADAR LA INICIATIVA A BCN","VISITA A LA SEU DE NACIONS UNIDES A GINEBRA","ASSISTÈNCIA AL 5TH SUMMIT SHOPPING TOURISM AND ECONOMY 2019 DE MADRID","VIATGE A MADRID PER REUNIR-SE AMB EL SR. JOSE MANUEL ALBARES","ACADEMIA ECON SOC I SOLIDARIA I ASS FORO ESTATAL D´HABITATGE COOPERATIU","MIQUEL RODRIGUEZ PLANAS.BRUSSEL.LES.8 OCTUBRE 2019","PARTICIPAR EN LA CIMERA REFORMBNB DE BUENOS AIRES I EN LA WORLD TRAVEL MARKET DE LONDRES","VIATGE M. DONALDSON A VALÈNCIA, PER LA ITU IX SEMANA NORMAS VERDES","VIATGE M. DONALDSON A LONDRES, PEL 21ST CENTURY COMMON SENSE CONFERENCE","TROBADA AMB SECRETÀRIA D'ESTAT DE TURISME","MIQUEL RODRIGUEZ. CGLU.DURBAN. 10-14 NOVEMBRE","PARTICIPACIÓ  BUYING FOR SOCIAL IMPACT CONFERENCE","PARTICIPACIÓ DEL REGIDOR EN RESOMA LAUNCH EVENT I EN EL GRUP DE TREBALL DE MIGRACIÓ","REUNIÓ AL CONSELL EUROPEU MUNICIPIS I REGIONS","ASSISTÈNCIA EUROCITIES","VIATGE JOAN SUBIRATS A MILÀ EL 14.11.19, PEL BOOKCITY MILANO","ASSISTÈNCIA 6È CONGRÉS MUNDIAL DE CGLU","VIATGE A MADRID RECOLLIDA PREMI NACIONAL D'URBANISME A PLA D'USOS DE CIUTAT VELLA","ASSISTÈNCIA AL COP25","PARTICIPACIÓ EN LA 4TH UNWTO/UNESCO WORLD CONFERENCE ON TOURISM AND CULTURE DE KIOTO","GINEBRA. MIQUEL RODRÍGUEZ.3-4 DESEMBRE","DIVERSES REUNIONS INSTITUCIONALS"],"Data_sortida":["2021-01-08","2021-01-06","2021-01-08","2020-01-08","2021-01-21","2019-01-17","2021-01-21","2020-01-22","2019-01-17","2020-01-21","2020-01-27","2020-01-30","2019-02-07","2022-03-16","2021-03-11","2021-03-11","2021-03-11","2021-03-11","2021-03-21","2020-02-06","2021-03-24","2020-02-07","2021-04-24","2021-04-15","2021-04-17","2021-05-04","2020-02-12","2020-02-04","2019-02-20","2021-05-05","2019-03-20","2020-01-27","2020-02-04","2021-05-20","2021-05-19","2021-05-20","2020-02-17","2021-05-20","2021-05-24","2021-05-30","2021-06-08","2021-06-18","2021-06-14","2021-06-22","2019-03-13","2020-02-28","2021-07-08","2020-03-03","2021-07-02","2020-02-24","2019-03-14","2020-02-28","2021-07-08","2020-02-24","2021-07-12","2020-03-11","2021-07-26","2021-09-05","2019-04-04","2021-09-01","2021-09-02","2021-09-07","2021-09-15","2019-04-03","2021-09-07","2021-09-08","2021-09-28","2021-09-19","2021-09-20","2021-09-20","2021-10-21","2021-10-06","2021-10-05","2021-10-14","2021-10-05","2021-07-26","2021-10-10","2021-10-15","2021-10-08","2021-10-11","2021-11-09","2021-10-19","2021-10-25","2021-10-22","2021-10-16","2021-10-17","2021-10-22","2021-10-25","2021-11-03","2021-11-10","2021-11-04","2021-11-05","2021-11-05","2021-11-11","2021-11-17","2021-11-22","2019-06-04","2021-11-12","2019-06-04","2021-09-28","2021-11-18","2021-11-24","2021-11-23","2021-12-01","2021-11-29","2021-11-29","2021-12-16","2019-05-07","2020-07-20","2021-12-01","2021-12-09","2021-12-17","2021-10-26","2021-12-22","2020-07-28","2020-01-24","2020-09-10","2020-09-29","2020-10-07","2020-10-08","2020-10-13","2019-06-26","2019-07-20","2019-07-22","2019-09-02","2019-09-02","2019-09-17","2019-10-07","2019-09-21","2019-09-20","2019-09-22","2019-10-01","2019-10-02","2019-10-01","2019-10-06","2019-10-08","2019-10-16","2019-10-08","2019-11-02","2019-10-01","2019-10-15","2019-10-28","2019-11-10","2019-11-17","2019-11-13","2019-11-05","2019-11-21","2019-11-14","2019-11-11","2019-11-28","2019-12-12","2019-12-10","2019-12-03","2019-12-16"],"Data_arribada":["2021-01-09","2021-01-12","2021-01-12","2020-01-08","2021-01-22","2019-01-17","2021-01-22","2020-01-25","2019-01-18","2020-01-25","2020-01-27","2020-01-31","2019-02-07","2022-03-19","2021-03-14","2021-03-12","2021-03-11","2021-03-12","2021-03-22","2020-02-09","2021-03-25","2020-02-10","2021-04-29","2021-04-16","2021-04-18","2021-05-07","2020-02-13","2020-02-04","2019-02-21","2021-05-05","2019-03-21","2020-01-27","2020-02-06","2021-05-21","2021-05-21","2021-05-23","2020-02-18","2021-05-23","2021-05-25","2021-05-31","2021-06-08","2021-06-28","2021-06-15","2021-06-23","2019-03-16","2020-03-03","2021-07-10","2020-03-04","2021-07-06","2020-02-24","2019-03-14","2020-02-28","2021-07-09","2020-02-24","2021-07-12","2020-03-14","2021-07-27","2021-09-06","2019-04-06","2021-09-04","2021-09-02","2021-09-08","2021-09-18","2019-04-06","2021-09-08","2021-09-08","2021-09-30","2021-09-20","2021-09-23","2021-09-23","2021-10-22","2021-10-07","2021-10-06","2021-10-15","2021-10-08","2021-07-27","2021-10-12","2021-10-16","2021-10-08","2021-10-12","2021-11-15","2021-10-20","2021-10-26","2021-10-23","2021-10-18","2021-10-18","2021-10-22","2021-10-26","2021-11-05","2021-11-12","2021-11-07","2021-11-10","2021-11-10","2021-11-13","2021-11-20","2021-11-24","2019-06-07","2021-11-14","2019-06-07","2021-09-30","2021-11-20","2021-11-27","2021-11-23","2021-12-02","2021-11-29","2021-11-29","2021-12-16","2019-05-08","2020-07-21","2021-12-02","2021-12-09","2021-12-17","2021-10-29","2021-12-22","2020-07-29","2020-01-26","2020-09-13","2020-09-30","2020-10-10","2020-10-10","2020-10-14","2019-06-28","2019-07-26","2019-07-23","2019-09-05","2019-09-04","2019-09-18","2019-10-09","2019-09-21","2019-09-21","2019-09-26","2019-10-10","2019-10-02","2019-10-01","2019-10-07","2019-10-08","2019-10-20","2019-10-08","2019-11-06","2019-10-02","2019-10-16","2019-10-29","2019-11-14","2019-11-18","2019-11-14","2019-11-05","2019-11-22","2019-11-16","2019-11-17","2019-11-29","2019-12-12","2019-12-14","2019-12-04","2019-12-17"],"Weekend":[false,false,true,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,true,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,true,false,false,false,true,false,false,false,true,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,true,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,false,false,false,false,false,false,false,true,false,false,false,false,false],"Pais_destinacio":["Espanya","Espanya","Espanya","Espanya","Espanya","França","Espanya","Espanya","França","Cuba","Espanya","Portugal","Espanya","França","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","E.A.U.","Mèxic","Espanya","Espanya","Espanya","Itàlia","Espanya","Espanya","Espanya","França","Espanya","Regne Unit","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Alemanya","Espanya","Iraq","França","Espanya","Itàlia","Portugal","Portugal","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","EUA","Espanya","França","Portugal","Espanya","Espanya","Alemanya","Hongria","Mèxic","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Països Baixos","Espanya","Espanya","Itàlia","Espanya","Espanya","Espanya","Regne Unit","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Espanya","Alemanya","Regne Unit","Bòsnia-Herz.","E.A.U.","E.A.U.","Espanya","Espanya","Dinamarca","França","Espanya","Països Baixos","Espanya","Espanya","França","Espanya","França","França","França","Espanya","Croàcia","Espanya","Bèlgica","Espanya","Espanya","Països Baixos","Espanya","Espanya","Espanya","Espanya","Espanya","Grècia","França","Espanya","Regne Unit","Japò","Espanya","República Txeca","Finlàndia","Espanya","França","Espanya","Espanya","EUA","Japò","França","Suïssa","Espanya","Espanya","Espanya","Bèlgica","Argentina","Espanya","Regne Unit","Espanya","Rep.Sud-àfrica","Bèlgica","Països Baixos","Bèlgica","República Txeca","Itàlia","Rep.Sud-àfrica","Espanya","Espanya","Japò","Suïssa","França"],"Durada":[1,6,4,0,1,0,1,3,1,4,0,1,0,3,3,1,0,1,1,3,1,3,5,1,1,3,1,0,1,0,1,0,2,1,2,3,1,3,1,1,0,10,1,1,3,4,2,1,4,0,0,0,1,0,0,3,1,1,2,3,0,1,3,3,1,0,2,1,3,3,1,1,1,1,3,1,2,1,0,1,6,1,1,1,2,1,0,1,2,2,3,5,5,2,3,2,3,2,3,2,2,3,0,1,0,0,0,1,1,1,0,0,3,0,1,2,3,1,3,2,1,2,6,1,3,2,1,2,0,1,4,9,0,0,1,0,4,0,4,1,1,1,4,1,1,0,1,2,6,1,0,4,1,1],"dia_arribada":["Saturday","Tuesday","Tuesday","Wednesday","Friday","Thursday","Friday","Saturday","Friday","Saturday","Monday","Friday","Thursday","Saturday","Sunday","Friday","Thursday","Friday","Monday","Sunday","Thursday","Monday","Thursday","Friday","Sunday","Friday","Thursday","Tuesday","Thursday","Wednesday","Thursday","Monday","Thursday","Friday","Friday","Sunday","Tuesday","Sunday","Tuesday","Monday","Tuesday","Monday","Tuesday","Wednesday","Saturday","Tuesday","Saturday","Wednesday","Tuesday","Monday","Thursday","Friday","Friday","Monday","Monday","Saturday","Tuesday","Monday","Saturday","Saturday","Thursday","Wednesday","Saturday","Saturday","Wednesday","Wednesday","Thursday","Monday","Thursday","Thursday","Friday","Thursday","Wednesday","Friday","Friday","Tuesday","Tuesday","Saturday","Friday","Tuesday","Monday","Wednesday","Tuesday","Saturday","Monday","Monday","Friday","Tuesday","Friday","Friday","Sunday","Wednesday","Wednesday","Saturday","Saturday","Wednesday","Friday","Sunday","Friday","Thursday","Saturday","Saturday","Tuesday","Thursday","Monday","Monday","Thursday","Wednesday","Tuesday","Thursday","Thursday","Friday","Friday","Wednesday","Wednesday","Sunday","Sunday","Wednesday","Saturday","Saturday","Wednesday","Friday","Friday","Tuesday","Thursday","Wednesday","Wednesday","Wednesday","Saturday","Saturday","Thursday","Thursday","Wednesday","Tuesday","Monday","Tuesday","Sunday","Tuesday","Wednesday","Wednesday","Wednesday","Tuesday","Thursday","Monday","Thursday","Tuesday","Friday","Saturday","Sunday","Friday","Thursday","Saturday","Wednesday","Tuesday"],"dia_sortida":["Friday","Wednesday","Friday","Wednesday","Thursday","Thursday","Thursday","Wednesday","Thursday","Tuesday","Monday","Thursday","Thursday","Wednesday","Thursday","Thursday","Thursday","Thursday","Sunday","Thursday","Wednesday","Friday","Saturday","Thursday","Saturday","Tuesday","Wednesday","Tuesday","Wednesday","Wednesday","Wednesday","Monday","Tuesday","Thursday","Wednesday","Thursday","Monday","Thursday","Monday","Sunday","Tuesday","Friday","Monday","Tuesday","Wednesday","Friday","Thursday","Tuesday","Friday","Monday","Thursday","Friday","Thursday","Monday","Monday","Wednesday","Monday","Sunday","Thursday","Wednesday","Thursday","Tuesday","Wednesday","Wednesday","Tuesday","Wednesday","Tuesday","Sunday","Monday","Monday","Thursday","Wednesday","Tuesday","Thursday","Tuesday","Monday","Sunday","Friday","Friday","Monday","Tuesday","Tuesday","Monday","Friday","Saturday","Sunday","Friday","Monday","Wednesday","Wednesday","Thursday","Friday","Friday","Thursday","Wednesday","Monday","Tuesday","Friday","Tuesday","Tuesday","Thursday","Wednesday","Tuesday","Wednesday","Monday","Monday","Thursday","Tuesday","Monday","Wednesday","Thursday","Friday","Tuesday","Wednesday","Tuesday","Friday","Thursday","Tuesday","Wednesday","Thursday","Tuesday","Wednesday","Saturday","Monday","Monday","Monday","Tuesday","Monday","Saturday","Friday","Sunday","Tuesday","Wednesday","Tuesday","Sunday","Tuesday","Wednesday","Tuesday","Saturday","Tuesday","Tuesday","Monday","Sunday","Sunday","Wednesday","Tuesday","Thursday","Thursday","Monday","Thursday","Thursday","Tuesday","Tuesday","Monday"],"Total":[972.1,1145.3,948.71,361.75,372.14,413.26,352.64,1367.4,14.5,5122.94,252.65,188.6,215.5,1212.63,603.4,449.66,221.6,356.15,504.35,990.77,430.95,1633.02,4209.95,333.2,501.68,1095.45,346.2,40.75,408.47,401.55,503.22,26.67,282.71,714.19,904.05,409.27,362.56,744.45,416.85,540.65,325.07,4994.24,1642.31,482.16,864.53,491.74,550,348.15,621.7,205.1,212.17,35.87,260.35,209,436.1,2120,592.55,327.2,327.75,866.64,618.5,743.35,650.27,141.05,259.27,230.15,1079.6,672.1,2042.2,836.45,426.92,635.48,387.45,1043.04,865.88,397.77,1910.49,376.64,78.25,1016.09,9280.91,263.05,416.49,362.08,479.6,240.44,187.7,390.26,1207.2,1428.32,611.9,4070.19,3447.17,681.82,572.37,587.27,72.9,80,1509.7,110,1650,1125.5,271.05,520,330.18,353.14,252.72,231.59,150,235.93,308.25,268.3,505.66,286.67,475.04,1349.77,739.03,246.99,730,774.92,600,182.7,5240.94,279.65,1146.53,252.2,576.67,339.94,269,604.05,3442.21,5468.5,95.82,291.4,710,223.7,160.02,558.3,1482.21,287.56,165.04,580.05,3354.28,484.98,812.99,370.2,535.88,358,2633.59,387.15,413.55,346.37,509.78,820],"Allotjament_diari":[540,134.5,134.5,0,138.24,0,138.24,266.67,0,96.81,0,0,0,204.55,108.2,110,0,107,150,172.63,160,186.67,210,106,150,152.08,0,0,169.63,0,0,0,0,108.06,195,45.42,140.71,130,153.88,206,0,105.86,700,56.15,107.12,59.33,0,0,75,0,0,0,200,0,0,273.33,300,0,0,100,0,318.96,91.67,0,0,0,275,200,300,100,160,200,133.67,250,133.33,119.93,552.6,133.65,0,500,1166.67,200,99.78,0,150,80,0,150.41,175,280.9,83.33,391.48,300,150,109.26,0,0,0,216.67,0,350,182.79,0,120,0,0,0,0,0,0,0,0,51.45,0,105.59,237.33,84.36,95,60,125.1,150,0,310,96.04,166.67,0,300,117.02,0,250,481.13,120,0,0,250,0,0,0,175,142.87,0,200,125,75.49,118.81,0,130,0,114.17,0,0,0,250,360],"Total_diari":[972.1,190.88,237.18,0,372.14,0,352.64,455.8,14.5,1280.74,0,188.6,0,404.21,201.13,449.66,0,356.15,504.35,330.26,430.95,544.34,841.99,333.2,501.68,365.15,346.2,0,408.47,0,503.22,0,141.36,714.19,452.02,136.42,362.56,248.15,416.85,540.65,0,499.42,1642.31,482.16,288.18,122.94,275,348.15,155.43,0,0,0,260.35,0,0,706.67,592.55,327.2,163.88,288.88,0,743.35,216.76,47.02,259.27,0,539.8,672.1,680.73,278.82,426.92,635.48,387.45,1043.04,288.63,397.77,955.24,376.64,0,1016.09,1546.82,263.05,416.49,362.08,239.8,240.44,0,390.26,603.6,714.16,203.97,814.04,689.43,340.91,190.79,293.64,24.3,40,503.23,55,825,375.17,0,520,0,0,0,231.59,150,235.93,0,0,168.55,0,475.04,674.88,246.34,246.99,243.33,387.46,600,91.35,873.49,279.65,382.18,126.1,576.67,169.97,0,604.05,860.55,607.61,0,0,710,0,40.01,0,370.55,287.56,165.04,580.05,838.57,484.98,812.99,0,535.88,179,438.93,387.15,0,86.59,509.78,820]},"columns":[{"accessor":"Numero_de_registre","name":"Numero_de_registre","type":"numeric"},{"accessor":"Exercici","name":"Exercici","type":"numeric"},{"accessor":"Titular","name":"Titular","type":"character"},{"accessor":"Càrrec","name":"Càrrec","type":"character"},{"accessor":"Motiu_viatge","name":"Motiu_viatge","type":"character"},{"accessor":"Data_sortida","name":"Data_sortida","type":"Date"},{"accessor":"Data_arribada","name":"Data_arribada","type":"Date"},{"accessor":"Weekend","name":"Weekend","type":"logical"},{"accessor":"Pais_destinacio","name":"Pais_destinacio","type":"character"},{"accessor":"Durada","name":"Durada","type":"numeric"},{"accessor":"dia_arribada","name":"dia_arribada","type":"character"},{"accessor":"dia_sortida","name":"dia_sortida","type":"character"},{"accessor":"Total","name":"Total","type":"numeric"},{"accessor":"Allotjament_diari","name":"Allotjament_diari","type":"numeric"},{"accessor":"Total_diari","name":"Total_diari","type":"numeric"}],"filterable":true,"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"dataKey":"f66157d1c33d81ad4a04a464cfb652bc","key":"f66157d1c33d81ad4a04a464cfb652bc"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="footnotes footnotes-end-of-document">
 <hr />
@@ -113,116 +209,351 @@ The information is organized in csv files with a record for each travel accounti
 </ol>
 </div>
 
-		</div>
-		<footer class="post__footer">
-			
-<div class="post__tags tags clearfix">
-	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/open-data-bcn/" rel="tag">Open Data BCN</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/plotly/" rel="tag">plotly</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/treemap/" rel="tag">treemap</a>
-		</li>
-	</ul>
-</div>
-		</footer>
-	</article>
-</main>
-
-<div class="authorbox clearfix">
-	<figure class="authorbox__avatar">
-		<img alt="John Doe avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
-	</figure>
-	<div class="authorbox__header">
-		<span class="authorbox__name">About John Doe</span>
-	</div>
-	<div class="authorbox__description">
-		John Doe&rsquo;s true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it.
-	</div>
+    </div>
+<div class="post_comments">
+  
+  
+  
 </div>
 
-<nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/post/2020-12-01-r-rmarkdown/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Hello R Markdown</p>
-		</a>
-	</div>
-</nav>
 
 
-			</div>
-			<aside class="sidebar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
-		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="/" />
-	</form>
-</div>
-<div class="widget-recent widget">
-	<h4 class="widget__title">Recent Posts</h4>
-	<div class="widget__content">
-		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/2022-05-09-bcn-council-travel/">Barcelona Counsillors&#39; Travel Expenses</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/2020-12-01-r-rmarkdown/">Hello R Markdown</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/basic-elements/">Basic HTML Elements</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/hugo-template-primer/">(Hu)go Template Primer</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/getting-started-with-hugo/">Getting Started with Hugo</a></li>
-		</ul>
-	</div>
-</div>
-<div class="widget-categories widget">
-	<h4 class="widget__title">Categories</h4>
-	<div class="widget__content">
-		<ul class="widget__list">
-			<li class="widget__item">
-				<a class="widget__link" href="/categories/development/">Development</a></li>
-			<li class="widget__item">
-				<a class="widget__link" href="/categories/golang/">golang</a></li>
-			<li class="widget__item">
-				<a class="widget__link" href="/categories/r/">R</a></li>
-		</ul>
-	</div>
-</div>
-<div class="widget-taglist widget">
-	<h4 class="widget__title">Tags</h4>
-	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/basic-elements/" title="Basic Elements">Basic Elements</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/css/" title="CSS">CSS</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/development/" title="development">development</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/go/" title="go">go</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/golang/" title="golang">golang</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/html/" title="HTML">HTML</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="hugo">hugo</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/open-data-bcn/" title="Open Data BCN">Open Data BCN</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/plot/" title="plot">plot</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/plotly/" title="plotly">plotly</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/r-markdown/" title="R Markdown">R Markdown</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/regression/" title="regression">regression</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/templates/" title="templates">templates</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/themes/" title="themes">themes</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/treemap/" title="treemap">treemap</a>
-	</div>
-</div>
+
+  </article>
+<aside class="sidebar">
+  <section class="sidebar_inner">
+    <br>
+    
+  
+  <div class="search">
+    <input type="search" class="search_field form_field" placeholder='Search...' id="find" autocomplete="off" data-scope='post'>
+    <label for="find" class="search_label"><svg class="icon">
+  <title>search</title>
+  <use xlink:href="#search"></use>
+</svg>
+
+    </label>
+    
+    <div class="search_results results"></div>
+  </div>
+
+        <h2>Admin</h2>
+      <div class="author_bio">
+        Tech dilettante and smarty pants at large.
+      </div>
+      <a href='https://example.com/about/' class="button mt-1" role="button" title='Read More'>Read More</a>
+
+    
+    
+    <h2 class="mt-4">Featured Posts</h2>
+    <ul>
+      <li>
+        <a href="https://example.com/post/markdown-syntax/" class="nav-link" title="Markdown Syntax Guide">Markdown Syntax Guide</a>
+      </li>
+    </ul>
+    <h2 class="mt-4">Recent Posts</h2>
+    <ul class="flex-column">
+      <li>
+        <a href="https://example.com/post/bundle/" class="nav-link" title="Using Hugo page bundles">Using Hugo page bundles</a>
+      </li>
+      <li>
+        <a href="https://example.com/post/notices/" class="nav-link" title="Using Notices">Using Notices</a>
+      </li>
+      <li>
+        <a href="https://example.com/post/2020-12-01-r-rmarkdown/" class="nav-link" title="Hello R Markdown">Hello R Markdown</a>
+      </li>
+      <li>
+        <a href="https://example.com/post/markdown-syntax/" class="nav-link" title="Markdown Syntax Guide">Markdown Syntax Guide</a>
+      </li>
+      <li>
+        <a href="https://example.com/post/rich-content/" class="nav-link" title="Rich Content">Rich Content</a>
+      </li>
+      <li>
+        <a href="https://example.com/post/placeholder-text/" class="nav-link" title="Placeholder Text">Placeholder Text</a>
+      </li>
+      <li>
+        <a href="https://example.com/post/math-typesetting/" class="nav-link" title="Math Typesetting">Math Typesetting</a>
+      </li>
+      <li>
+        <a href="https://example.com/post/emoji-support/" class="nav-link" title="Emoji Support">Emoji Support</a>
+      </li>
+    </ul>
+    <div>
+      <h2 class="mt-4 taxonomy" id="categories-section">Categories</h2>
+      <nav class="tags_nav">
+        <a href='https://example.com/categories/r/' class="post_tag button button_translucent" title="r">
+          R
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://example.com/categories/syntax/' class="post_tag button button_translucent" title="syntax">
+          SYNTAX
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://example.com/categories/themes/' class="post_tag button button_translucent" title="themes">
+          THEMES
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+    <div>
+      <h2 class="mt-4 taxonomy" id="series-section">Series</h2>
+      <nav class="tags_nav">
+        <a href='https://example.com/series/themes-guide/' class="post_tag button button_translucent" title="themes-guide">
+          THEMES-GUIDE
+          <span class="button_tally">2</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+    <div>
+      <h2 class="mt-4 taxonomy" id="tags-section">Tags</h2>
+      <nav class="tags_nav">
+        <a href='https://example.com/tags/markdown/' class="post_tag button button_translucent" title="markdown">
+          MARKDOWN
+          <span class="button_tally">2</span>
+        </a>
+        
+        <a href='https://example.com/tags/css/' class="post_tag button button_translucent" title="css">
+          CSS
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/emoji/' class="post_tag button button_translucent" title="emoji">
+          EMOJI
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/featured/' class="post_tag button button_translucent" title="featured">
+          FEATURED
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/html/' class="post_tag button button_translucent" title="html">
+          HTML
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/hugo/' class="post_tag button button_translucent" title="hugo">
+          HUGO
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/index/' class="post_tag button button_translucent" title="index">
+          INDEX
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/open-data-bcn/' class="post_tag button button_translucent" title="open-data-bcn">
+          OPEN-DATA-BCN
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/plot/' class="post_tag button button_translucent" title="plot">
+          PLOT
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/plotly/' class="post_tag button button_translucent" title="plotly">
+          PLOTLY
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/privacy/' class="post_tag button button_translucent" title="privacy">
+          PRIVACY
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/r-markdown/' class="post_tag button button_translucent" title="r-markdown">
+          R-MARKDOWN
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/regression/' class="post_tag button button_translucent" title="regression">
+          REGRESSION
+          <span class="button_tally">1</span>
+        </a>
+        
+        <a href='https://example.com/tags/shortcodes/' class="post_tag button button_translucent" title="shortcodes">
+          SHORTCODES
+          <span class="button_tally">1</span>
+        </a>
+        
+        
+        <br>
+        <div class="post_tags_toggle button">All Tags</div>
+        <div class="post_tags">
+          <div class="tags_list">
+            
+            <a href='https://example.com/tags/css/' class=" post_tag button button_translucent" data-position=1 title="css">CSS<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/emoji/' class=" post_tag button button_translucent" data-position=1 title="emoji">EMOJI<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/featured/' class=" post_tag button button_translucent" data-position=1 title="featured">FEATURED<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/html/' class=" post_tag button button_translucent" data-position=1 title="html">HTML<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/hugo/' class=" post_tag button button_translucent" data-position=1 title="hugo">HUGO<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/index/' class=" post_tag button button_translucent" data-position=1 title="index">INDEX<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/markdown/' class=" post_tag button button_translucent" data-position=2 title="markdown">MARKDOWN<span class="button_tally">2</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/open-data-bcn/' class=" post_tag button button_translucent" data-position=1 title="open-data-bcn">OPEN-DATA-BCN<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/plot/' class=" post_tag button button_translucent" data-position=1 title="plot">PLOT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/plotly/' class=" post_tag button button_translucent" data-position=1 title="plotly">PLOTLY<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/privacy/' class=" post_tag button button_translucent" data-position=1 title="privacy">PRIVACY<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/r-markdown/' class=" post_tag button button_translucent" data-position=1 title="r-markdown">R-MARKDOWN<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/regression/' class=" post_tag button button_translucent" data-position=1 title="regression">REGRESSION<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/shortcodes/' class=" post_tag button button_translucent" data-position=1 title="shortcodes">SHORTCODES<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/text/' class=" post_tag button button_translucent" data-position=1 title="text">TEXT<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/themes/' class=" post_tag button button_translucent" data-position=1 title="themes">THEMES<span class="button_tally">1</span>
+            </a>
+            
+            
+            <a href='https://example.com/tags/treemap/' class=" post_tag button button_translucent" data-position=1 title="treemap">TREEMAP<span class="button_tally">1</span>
+            </a>
+            
+            <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span title="sort by count">[0~9]</span>
+            </div>
+            <span class="tags_hide"><svg class="icon">
+            <use xlink:href="#closeme"></use>
+          </svg></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
 </aside>
-		</div>
-		<footer class="footer">
-	<div class="container footer__container flex">
-		
-		<div class="footer__copyright">
-			&copy; 2022 Nice R Charts.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
-		</div>
-	</div>
+
+  
+</div>
+    </main><svg width="0" height="0" class="hidden">
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.001 18.001" id="twitter">
+    <path d="M15.891 4.013c.808-.496 1.343-1.173 1.605-2.034a8.68 8.68 0 0 1-2.351.861c-.703-.756-1.593-1.14-2.66-1.14-1.043 0-1.924.366-2.643 1.078a3.56 3.56 0 0 0-1.076 2.605c0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846 0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47 0 .929.273 1.705.82 2.388a3.623 3.623 0 0 0 2.115 1.291c-.312.08-.641.118-.979.118-.312 0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841a3.652 3.652 0 0 0 2.152.743C4.148 14.173 2.625 14.69.902 14.69c-.422 0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139 0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974a10.77 10.77 0 0 0 1.172-4.892v-.468a7.788 7.788 0 0 0 1.84-1.921 8.142 8.142 0 0 1-2.11.593z"
+      ></path>
+  </symbol>
+  <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+    <path  d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar">
+    <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916 0 100v352c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V100c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028 0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028 0 20 8.972 20 20v48z"></path>
+    <path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github">
+    <path d="M255.968 5.329C114.624 5.329 0 120.401 0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384 0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008 0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992 0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584 0 34.368-.32 62.08-.32 70.496 0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 212" id="gitlab">
+    <path d="M12.3 74.7h54L43.3 3c-1-3.6-6.4-3.6-7.6 0L12.3 74.8z" />
+    <path d="M12.3 74.7L.5 111c-1 3.2 0 6.8 3 8.8l101.6 74-92.5-119z"/>
+    <path d="M105 193.7l-38.6-119h-54l92.7 119z"/>
+    <path d="M105 193.7l38.7-119H66.4l38.7 119z"/>
+    <path d="M105 193.7l38.7-119H198l-93 119z"/>
+    <path d="M198 74.7l11.6 36.2c1 3 0 6.6-3 8.6l-101.5 74 93-119z"/>
+    <path d="M198 74.7h-54.3L167 3c1.2-3.6 6.4-3.6 7.6 0L198 74.8z"/> 
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="rss">
+    <circle cx="3.429" cy="20.571" r="3.429"></circle>
+    <path d="M11.429 24h4.57C15.999 15.179 8.821 8.001 0 8v4.572c6.302.001 11.429 5.126 11.429 11.428z"></path>
+    <path d="M24 24C24 10.766 13.234 0 0 0v4.571c10.714 0 19.43 8.714 19.43 19.429z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin">
+    <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h362c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="to-top">
+    <path d="M604.501 440.509L325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298 0 36.323s26.223 10.024 36.222 0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221 0 9.999-10.023 9.999-26.298 0-36.323z"></path>
+  </symbol>
+  <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly">
+    <path d="M504.971 239.029L448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c19.851 0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002 0 0 0 400 320v108c0 19.851-16.149 36-36 36h-44c-13.255 0-24 10.745-24 24s10.745 24 24 24h44c46.318 0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568 0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255 0 24-10.745 24-24S205.255 0 192 0h-44c-46.318 0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568 0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255 0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851 0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002 0 0 0 112 192z"></path>
+  </symbol>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy">
+    <path d="M23 2.75A2.75 2.75 0 0 0 20.25 0H8.75A2.75 2.75 0 0 0 6 2.75v13.5A2.75 2.75 0 0 0 8.75 19h11.5A2.75 2.75 0 0 0 23 16.25zM18.25 14.5h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5zm0-3h-7.5a.75.75 0 0 1 0-1.5h7.5a.75.75 0 0 1 0 1.5z"></path>
+    <path d="M8.75 20.5a4.255 4.255 0 0 1-4.25-4.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752 0 0 0 1 5.25v16A2.752 2.752 0 0 0 3.75 24h12a2.752 2.752 0 0 0 2.75-2.75v-.75z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme">
+    <path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0 0 14.143 5.857 19.94 19.94 0 0 0 14.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu">
+    <path d="M492 236H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954 0 96s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h472c11.046 0 20-8.954 20-20s-8.954-20-20-20z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id=youtube>
+    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stackoverflow">
+    <path d="M21 27v-8h3v11H0V19h3v8h18z"></path><path d="M17.1.2L15 1.8l7.9 10.6 2.1-1.6L17.1.2zm3.7 14.7L10.6 6.4l1.7-2 10.2 8.5-1.7 2zM7.2 12.3l12 5.6 1.1-2.4-12-5.6-1.1 2.4zm-1.8 6.8l13.56 1.96.17-2.38-13.26-2.55-.47 2.97zM19 25H5v-3h14v3z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="xing">
+    <path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/>
+  </symbol>
+</svg>
+
+
+<footer class="footer">
+  <div class="footer_inner wrap pale">
+    <img src='https://example.com/icons/apple-touch-icon.png' class="icon icon_2 transparent" alt="Clarity">
+    <p>Copyright&nbsp;<span class="year"></span>&nbsp;CLARITY. All Rights Reserved</p><a class="to_top" href="#documentTop">
+  <svg class="icon">
+  <title>to-top</title>
+  <use xlink:href="#to-top"></use>
+</svg>
+
+</a>
+
+  </div>
 </footer>
-	</div>
-<script async defer src="/js/menu.js"></script>
-</body>
+
+    <script type="text/javascript" src="https://example.com/en/js/bundle.a7e29fae500d5aa0b137ab7f9ecfd16d0097f9aa642ebaa2e50088be505404a8995af89844f4456b23bc5b90b9387e95dc08247598a2bd7d816f88bfe4d7bceb.js" integrity="sha512-p&#43;KfrlANWqCxN6t/ns/RbQCX&#43;apkLrqi5QCIvlBUBKiZWviYRPRFayO8W5C5OH6V3AgkdZiivX2Bb4i/5Ne86w==" crossorigin="anonymous"></script>
+
+  <script src="https://example.com/js/search.min.c627ab876c70b15e3317a5a8d5ffc2ee41afd402f8cec1ec0fc7d89fd756a9f5b4aa6977b32e518ceb43af4fc09bab789b36c8ff61d209898f7e4d815115583a.js"></script>
+
+    
+  </body>
 </html>

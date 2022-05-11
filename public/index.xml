@@ -1,98 +1,162 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nice R Charts</title>
-    <link>/</link>
-    <description>Recent content on Nice R Charts</description>
+    <title>Clarity</title>
+    <link>https://example.com/</link>
+    <description>Recent content on Clarity</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 09 May 2022 21:13:14 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Customization</title>
-      <link>/docs/customization/</link>
-      <pubDate>Mon, 24 Jan 2022 14:00:00 +0000</pubDate>
-      
-      <guid>/docs/customization/</guid>
-      <description>&lt;p&gt;Customization page describes common Mainroad configuration parameters which can be specified via configuration file or
-via Front Matter section. That includes logo section tuning, adding a sidebar with widgets, adjusting highlight color,
-and more.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Frequently asked questions (FAQ)</title>
-      <link>/docs/faq/</link>
-      <pubDate>Mon, 24 Jan 2022 14:00:00 +0000</pubDate>
-      
-      <guid>/docs/faq/</guid>
-      <description>&lt;p&gt;Browse this FAQ page to find answers to frequently asked questions that have not been covered elsewhere
-in the documentation.&lt;/p&gt;</description>
-    </item>
-    
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 09 May 2022 21:13:14 -0500</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Barcelona Counsillors&#39; Travel Expenses</title>
-      <link>/post/2022-05-09-bcn-council-travel/</link>
+      <link>https://example.com/post/2022-05-09-bcn-council-travel/</link>
       <pubDate>Mon, 09 May 2022 21:13:14 -0500</pubDate>
       
-      <guid>/post/2022-05-09-bcn-council-travel/</guid>
-      <description>Introduction Owing to the Open Data BCN project, Barcelona City Council provides several datasets which are almost ready for consumption with minimal pre-processing. Among them, the tables of travel expenses of members of the town council (excluding the mayor) by year contain information about cost, duration and destination of the travels of said members since 2019. 1
-The information is organized in csv files with a record for each travel accounting id (Numero_de registre in the files) and expense category: travel proper (Desplaçament), lodging (Allotjament) and other (Altres despeses).</description>
+      <guid>https://example.com/post/2022-05-09-bcn-council-travel/</guid>
+      <description>
+        
+          
+            Introduction Owing to the Open Data BCN project, Barcelona City Council provides several datasets which are almost ready for consumption with minimal pre-processing. Among them, the tables of travel expenses of members of the town council (excluding the mayor) by year contain information about cost, duration and destination of the travels of said members since 2019. 1
+The information is organized in csv files with a record for each travel accounting id (Numero_de registre in the files) and expense category: travel proper (Desplaçament), lodging (Allotjament) and other (Altres despeses).
+          
+          
+        
+      </description>
     </item>
     
     <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Mon, 09 May 2022 14:00:00 +0000</pubDate>
+      <title>Using Hugo page bundles</title>
+      <link>https://example.com/post/bundle/</link>
+      <pubDate>Thu, 24 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
-      <description>This is a personal website for experimenting with the R ecosystem, while practicing markdown, static web creation and writing skills. All content is provided under the Creative Commons License CC BY 4.0.</description>
+      <guid>https://example.com/post/bundle/</guid>
+      <description>
+        
+          
+            Page bundles are an optional way to organize page resources within Hugo.
+You can opt-in to using page bundles in Hugo Clarity with usePageBundles in your site configuration or in a page&#39;s front matter. Read more about usePageBundles.
+With page bundles, resources for a page or section, like images or attached files, live in the same directory as the content itself rather than in your static directory.
+Hugo Clarity supports the use of leaf bundles, which are any directories within the content directory that contain an index.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Using Notices</title>
+      <link>https://example.com/post/notices/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/notices/</guid>
+      <description>
+        
+          
+            The &amp;quot;Notices&amp;quot; shortcode enables you to call out pieces of information - sidebars, warnings, tips, etc.
+To create a notice on a page, you can use the notice shortcode.
+You use the notice shortcode, with the first parameter being one of note, info, tip, and warning. Then add a title for your note in quotes as the second parameter. The inner body of the note can be whatever markdown you want to create.
+          
+          
+        
+      </description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2020-12-01-r-rmarkdown/</link>
+      <link>https://example.com/post/2020-12-01-r-rmarkdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>/post/2020-12-01-r-rmarkdown/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+      <guid>https://example.com/post/2020-12-01-r-rmarkdown/</guid>
+      <description>
+        
+          
+            R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.
+          
+          
+        
+      </description>
     </item>
     
     <item>
-      <title>Basic HTML Elements</title>
-      <link>/post/basic-elements/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <title>Markdown Syntax Guide</title>
+      <link>https://example.com/post/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/basic-elements/</guid>
-      <description>&lt;p&gt;The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.&lt;/p&gt;</description>
+      <guid>https://example.com/post/markdown-syntax/</guid>
+      <description>
+        
+          
+            &lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+          
+          
+        
+      </description>
     </item>
     
     <item>
-      <title>(Hu)go Template Primer</title>
-      <link>/post/hugo-template-primer/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>Rich Content</title>
+      <link>https://example.com/post/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/hugo-template-primer/</guid>
-      <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for
-its template engine. It is an extremely lightweight engine that provides a very
-small amount of logic. In our experience that it is just the right amount of
-logic to be able to create a good static website. If you have used other
-template systems from different languages or frameworks you will find a lot of
-similarities in Go templates.&lt;/p&gt;</description>
+      <guid>https://example.com/post/rich-content/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
+          
+          
+        
+      </description>
     </item>
     
     <item>
-      <title>Getting Started with Hugo</title>
-      <link>/post/getting-started-with-hugo/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>Placeholder Text</title>
+      <link>https://example.com/post/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/getting-started-with-hugo/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>https://example.com/post/placeholder-text/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://example.com/post/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/math-typesetting/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>https://example.com/post/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/emoji-support/</guid>
+      <description>
+        
+          
+            &lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
+          
+          
+        
+      </description>
     </item>
     
   </channel>

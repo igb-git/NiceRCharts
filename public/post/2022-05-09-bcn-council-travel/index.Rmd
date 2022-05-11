@@ -8,8 +8,6 @@ tags: ["Open Data BCN", "plotly", "treemap"]
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
-
-load(file = "../../../resources/_gen/assets/G.Rdata")
 ```
 
 ## Introduction
@@ -18,8 +16,33 @@ Owing to the [Open Data BCN](https://opendata-ajuntament.barcelona.cat/es) proje
 
 The information is organized in csv files with a record for each travel accounting id (*Numero_de registre* in the files) and expense category: travel proper (*Desplaçament*), lodging (*Allotjament*) and other (*Altres despeses*). Each record contains the name of the member, city and country of destination, amount in euros and dates of departure and arrival.
 
-With that in mind we are ready to start exploring the data.
+## Enter the charts
 
-## Total travel expenses by year
+With that in mind we are ready to start exploring the data. First, we plot the aggregate expenses per year (bearing in mind that for 2022 we only have data for the first quarter).
 
+```{r datos, echo=FALSE}
+load(file = "../../../resources/_gen/assets/G.Rdata")
 g
+```
+
+This is quite a plain plot but, since we have data that can be related in a hierarchical (or nested) fashion (as in ); we can use the [treemap](https://plotly.com/r/treemaps/) from plotly graphing library to make a more interesting visualization. For instance, we can present the data aggregated by year and allow a drill down to an aggregation by member or the council and then show the detail of the travel, like so:
+
+```{r fig1, echo= FALSE}
+fig1
+```
+
+By clicking on the rectangles 
+
+Another way of looking at the data is by first aggregating by council member and then by year:
+
+```{r fig2, echo= FALSE}
+fig2
+```
+
+## If everythig fails...
+
+Sometimes it may be more convenient to just provide acces to the granular data and let the user do the queries. In this case, luckily this is quite eays thanks to the features of [reactable](https://cran.r-project.org/web/packages/reactable/index.html)
+
+```{r rt, echo= FALSE}
+rt
+```
